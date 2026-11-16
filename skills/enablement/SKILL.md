@@ -11,7 +11,7 @@ version: 1.0.0
 ## Before anything
 
 Follow the shared protocol. It is part of this skill:
-`~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md`
+`~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md`
 
 | | |
 |---|---|
@@ -21,7 +21,7 @@ Follow the shared protocol. It is part of this skill:
 | **Template** | `template.md` in this skill's folder |
 | **Downstream on re-run** | marks `14_Metrics-and-Feedback.md` and `15_Execution-Audit.md` `STALE` |
 
-**Gate (protocol §3, Phase 2).** Read the verdict in `08_Coherence-Audit.md` and state it in the header. **FAIL → stop**; offer `gtm-engine:coherence-audit` after the named fixes. `08` missing → stop. Then: `03`, `06`, `07`, `09`, `10` must exist and not be `STALE` — if one is missing, stop and offer its skill (`value-prop`, `proof`, `pricing`, `motion`, `revenue-process`). `11` and `12` are optional; their absence becomes MISSING rows in the toolkit, not a stop.
+**Gate (protocol §3, Phase 2).** Read the verdict in `08_Coherence-Audit.md` and state it in the header. **FAIL → stop**; offer `gtm-machine-os:coherence-audit` after the named fixes. `08` missing → stop. Then: `03`, `06`, `07`, `09`, `10` must exist and not be `STALE` — if one is missing, stop and offer its skill (`value-prop`, `proof`, `pricing`, `motion`, `revenue-process`). `11` and `12` are optional; their absence becomes MISSING rows in the toolkit, not a stop.
 
 ## Rules specific to this pillar
 
@@ -62,7 +62,7 @@ Follow the shared protocol. It is part of this skill:
 Run the gate above. List every file in `products/<slug>/`, `assets/` and `leads/` with its status line. Read the Business Profile and the spine defaults (P8 smallest stack, P9 advisory). Write the timeline sentence (Voje ch.8): *"In [secured time], we have to achieve [GTM objective]"*, taking the objective from `09`/`14` if present, or else `ASSUMED`.
 
 ### 2. Research (deep step ①)
-Small `gtm-engine:researcher` briefs that save to `products/<slug>/research/` as they go:
+Small `gtm-machine-os:researcher` briefs that save to `products/<slug>/research/` as they go:
 - **Data protection per P7 market:** tracking and messaging consent, processor DPAs, contact-data scraping. Primary sources, dated.
 - **Stack facts:** for the current tools (from `00_Discovery.md`) and ≤2 candidates per missing function, record the scaling-tier price, DPA availability, data residency and native integrations. Vendor pages, dated.
 
@@ -74,7 +74,7 @@ In this order: toolkit index (rules 1, 3, 4) → squad and ownership (11, 12) �
 - includes daily stand-ups for the first 30 days of launch (HubSpot p25), and links to the course-correction triggers in `14`, or flags them for `14` if it isn't built.
 
 ### 4. Judgement (deep step ③)
-Send `gtm-engine:strategist` the inventory, profile, motion and draft. Ask for:
+Send `gtm-machine-os:strategist` the inventory, profile, motion and draft. Ask for:
 - the stack per function and the alternative that lost;
 - what is in and out of the toolkit for this motion;
 - the proposal shape;
@@ -83,7 +83,7 @@ Send `gtm-engine:strategist` the inventory, profile, motion and draft. Ask for:
 - what would flip each call.
 
 ### 5. Attack (deep step ④)
-Send `gtm-engine:evidence-auditor` everything below:
+Send `gtm-machine-os:evidence-auditor` everything below:
 - every toolkit path (does it exist? its status?);
 - the ROI formulas against `03` and the prices against `07`;
 - each proposal proof line against the claims register and consent;
@@ -106,7 +106,7 @@ Write to `products/<slug>/assets/`:
 | `13_rollout-30-day.md` | Week 1–4 tasks with owner and date; the internal advocacy session; the weekly meeting agenda; launch stand-ups; links to `14` triggers | Running the first month without re-planning |
 
 ### 7. Tracker and present
-Update `00_Playbook-Tracker.md` per protocol §10 (Pillar 11 row and its done-when list; `14` and `15` to `STALE` if they exist). Present per protocol §8: toolkit coverage as `EXISTS n / needed N`, missing assets with their owning skills, open ticks waiting on confirmation, and the weakest assumption. Next skill: `gtm-engine:metrics` (Pillar 12).
+Update `00_Playbook-Tracker.md` per protocol §10 (Pillar 11 row and its done-when list; `14` and `15` to `STALE` if they exist). Present per protocol §8: toolkit coverage as `EXISTS n / needed N`, missing assets with their owning skills, open ticks waiting on confirmation, and the weakest assumption. Next skill: `gtm-machine-os:metrics` (Pillar 12).
 
 ## Checks before presenting
 

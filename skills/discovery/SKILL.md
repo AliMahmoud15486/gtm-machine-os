@@ -1,6 +1,6 @@
 ---
 name: discovery
-description: GTM Step 0 — deep discovery of the company and product BEFORE any strategy work. Builds one verified fact base the whole GTM Engine rests on — product truth (what the code, config and live product actually do), public footprint (website, store listings, app stores, social, every public claim captured verbatim), legal pages (privacy policy, terms — promises and roles), commercial facts (prices, billing, platform cut, unit costs, payout and tax setup), platform and provider dependencies (approval status, policies, quality ratings), evidence inventory (customers, users, usage, reviews, interviews, deals), operations and capacity, instrumentation, compliance risks, a quick category and competitor scan, and the decisions already made. Cross-checks public claims against product truth to catch contradictions early, then asks the owner one ranked question bank covering only what research could not answer, each question tagged with the pillar it unblocks. Works for the owner's own products (with docs/code access) and for client companies (public research + a discovery call). Deep by default (researcher → evidence auditor). Produces 00_Discovery.md, a filled 00_Intake.md and assets (fact base, claims-vs-truth, question bank, evidence inventory, risk register, source map). Trigger with "discovery for X", "research the company X before the strategy", "deep research on X", "start a GTM for X", "onboard X into the GTM machine", "what do we know about X", or as step 0 of gtm-engine:strategy.
+description: GTM Step 0 — deep discovery of the company and product BEFORE any strategy work. Builds one verified fact base the whole GTM Machine OS rests on — product truth (what the code, config and live product actually do), public footprint (website, store listings, app stores, social, every public claim captured verbatim), legal pages (privacy policy, terms — promises and roles), commercial facts (prices, billing, platform cut, unit costs, payout and tax setup), platform and provider dependencies (approval status, policies, quality ratings), evidence inventory (customers, users, usage, reviews, interviews, deals), operations and capacity, instrumentation, compliance risks, a quick category and competitor scan, and the decisions already made. Cross-checks public claims against product truth to catch contradictions early, then asks the owner one ranked question bank covering only what research could not answer, each question tagged with the pillar it unblocks. Works for the owner's own products (with docs/code access) and for client companies (public research + a discovery call). Deep by default (researcher → evidence auditor). Produces 00_Discovery.md, a filled 00_Intake.md and assets (fact base, claims-vs-truth, question bank, evidence inventory, risk register, source map). Trigger with "discovery for X", "research the company X before the strategy", "deep research on X", "start a GTM for X", "onboard X into the GTM machine", "what do we know about X", or as step 0 of gtm-machine-os:strategy.
 ---
 
 # GTM Discovery — Step 0 (before the strategy)
@@ -10,7 +10,7 @@ Every pillar after this reads `00_Discovery.md` instead of rediscovering the com
 
 ## Before anything
 
-Follow the shared protocol (it is part of this skill): `~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md` — GTM_ROOT, evidence tags, deep mode with small briefs that save as they go, the owner proposes-and-disposes.
+Follow the shared protocol (it is part of this skill): `~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md` — GTM_ROOT, evidence tags, deep mode with small briefs that save as they go, the owner proposes-and-disposes.
 
 | | |
 |---|---|
@@ -75,10 +75,10 @@ List every source (docs folders, repo paths, live URLs, portals the owner can de
 Read the docs and the code/config: build the **product truth inventory** (A2) with file:line or doc references, plans/limits as enforced, onboarding, events/tables (A10). Note every place docs and code disagree.
 
 ### 3. Research (deep step ①, in parallel, in the background)
-Small `gtm-engine:researcher` briefs that save as they go:
+Small `gtm-machine-os:researcher` briefs that save as they go:
 - **Footprint & claims brief:** fetch every live surface; capture claims verbatim with URL + date (A3); read the legal pages in full (A4).
 - **Commercial & platform brief:** price/billing pages, platform partner terms, provider rate cards and policies, approval/quality status where public (A5, A6).
-- **Entity & compliance brief:** entity and registration facts, the data-protection, messaging and advertising rules for the target market(s) (A1, A11). Reuse `gtm-engine:lead-research`'s `references/market-<CC>.md` if it exists.
+- **Entity & compliance brief:** entity and registration facts, the data-protection, messaging and advertising rules for the target market(s) (A1, A11). Reuse `gtm-machine-os:lead-research`'s `references/market-<CC>.md` if it exists.
 - **Category brief:** category names, 5–10 alternatives with public prices (A7).
 While they run, do steps 1–2 and the evidence count (A8).
 
@@ -86,7 +86,7 @@ While they run, do steps 1–2 and the evidence count (A8).
 Build `assets/00_claims-vs-truth.csv`: every public claim against A2/A4/A5 — status (true / true with condition / unsupported / false), the evidence, the fix. Also check docs vs code, listing vs pricing, legal promises vs what the code does with data. **This is where contradictions get caught before any strategy is written.**
 
 ### 5. Attack (deep step ④)
-Send `gtm-engine:evidence-auditor` the fact base, the claims-vs-truth table and the risk register. Ask it to re-verify the weight-bearing facts at source and to look for contradictions the draft missed. Fix or carry into the question bank.
+Send `gtm-machine-os:evidence-auditor` the fact base, the claims-vs-truth table and the risk register. Ask it to re-verify the weight-bearing facts at source and to look for contradictions the draft missed. Fix or carry into the question bank.
 
 ### 6. Question bank
 `assets/00_question-bank.md`: only what research couldn't answer, each question with:
@@ -107,7 +107,7 @@ Rank by how much downstream work rests on it. **Own product:** ask the owner the
 - **READY** — every ★ question answered, no unresolved critical risk that changes what can be said or sold.
 - **READY WITH GAPS** — ★ answered or explicitly parked by the owner; gaps listed with the pillar they affect.
 - **NOT READY** — any Business Profile field P1–P5 still unknown, a ★ question unanswered that blocks Pillar 1–3, or a critical contradiction (e.g. a live public claim that's false) the owner hasn't decided on.
-Present per protocol §8: evidence count, the contradictions found, the ★ questions, the verdict. Next: `gtm-engine:strategy` (or `gtm-engine:segmentation` directly).
+Present per protocol §8: evidence count, the contradictions found, the ★ questions, the verdict. Next: `gtm-machine-os:strategy` (or `gtm-machine-os:segmentation` directly).
 
 ## Assets (`products/<slug>/assets/`)
 

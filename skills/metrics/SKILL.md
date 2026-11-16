@@ -11,7 +11,7 @@ version: 1.0.0
 ## Before anything
 
 Follow the shared protocol. It is part of this skill:
-`~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md`
+`~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md`
 
 | | |
 |---|---|
@@ -21,7 +21,7 @@ Follow the shared protocol. It is part of this skill:
 | **Template** | `template.md` in this skill's folder |
 | **Downstream on re-run** | marks `15_Execution-Audit.md` `STALE` if it exists; nothing earlier. Its findings may **recommend** re-running earlier pillars (§ Review loop); it never sets an upstream artifact `STALE` itself |
 
-**Phase 2 gate.** Phase 2 executes the locked strategy; it does not remake it. If `08` is missing or its verdict is **FAIL**, stop and offer `gtm-engine:coherence-audit`. State the verdict in the header. Any upstream Phase 1 artifact `STALE` → stop (protocol §3). A missing Phase 2 artifact (`09`–`13`) does not stop the run: list it as a gap, take that stage's metrics from the playbook defaults and mark them `ASSUMED`. If `09` is missing, read the motion from the Business Profile defaults in `SPINE.md`, marked `ASSUMED`, and recommend `gtm-engine:motion`. Owning skills for Phase 2 findings: `motion` (09), `revenue-process` (10), `demand-gen` (11), `outbound` (12), `enablement` (13). This skill never changes ICP, positioning, messaging, pricing or any upstream threshold; a conflict becomes a finding for the owning skill.
+**Phase 2 gate.** Phase 2 executes the locked strategy; it does not remake it. If `08` is missing or its verdict is **FAIL**, stop and offer `gtm-machine-os:coherence-audit`. State the verdict in the header. Any upstream Phase 1 artifact `STALE` → stop (protocol §3). A missing Phase 2 artifact (`09`–`13`) does not stop the run: list it as a gap, take that stage's metrics from the playbook defaults and mark them `ASSUMED`. If `09` is missing, read the motion from the Business Profile defaults in `SPINE.md`, marked `ASSUMED`, and recommend `gtm-machine-os:motion`. Owning skills for Phase 2 findings: `motion` (09), `revenue-process` (10), `demand-gen` (11), `outbound` (12), `enablement` (13). This skill never changes ICP, positioning, messaging, pricing or any upstream threshold; a conflict becomes a finding for the owning skill.
 
 ## Rules specific to this pillar
 
@@ -58,7 +58,7 @@ Follow the shared protocol. It is part of this skill:
 Run the Phase 2 gate. Read the Business Profile and state the defaults applied. Then build the **harvest table**: every metric, target and threshold from `03`–`13` and their assets, with `file §`, its current status (set / measured / UNKNOWN) and duplicates or conflicts.
 
 ### 2. Research (deep step ①)
-Small `gtm-engine:researcher` briefs that save to `products/<slug>/research/`:
+Small `gtm-machine-os:researcher` briefs that save to `products/<slug>/research/`:
 - what the existing stack (`00` A9/A10, `13`) can capture natively, and at what cost;
 - external benchmarks only where the frameworks give none for this business type — tagged `RESEARCHED`, used as targets, never as baselines.
 
@@ -74,10 +74,10 @@ Small `gtm-engine:researcher` briefs that save to `products/<slug>/research/`:
 - **Review loop:** the metric movements that recommend re-running Pillars 1–3 (and 4–6), each with its threshold and review window, plus the scheduled 6–12-month review (segments, prices, offer ladder; Session #11 p21: margins, CAC:LTV, price realisation, win/loss by tier).
 
 ### 4. Judgement (deep step ③)
-Send `gtm-engine:strategist` the harvest table and draft. Ask for: the NSM and the OMTM; the cut to the smallest dashboard for this capacity; which thresholds trigger which action; which re-run triggers are real; what would flip each call.
+Send `gtm-machine-os:strategist` the harvest table and draft. Ask for: the NSM and the OMTM; the cut to the smallest dashboard for this capacity; which thresholds trigger which action; which re-run triggers are real; what would flip each call.
 
 ### 5. Attack (deep step ④)
-Send `gtm-engine:evidence-auditor`: every formula, every threshold and its source, every baseline claim, vanity or actionless metrics, double counting across stages, attribution claims, metrics that can't be captured, and consistency with each upstream threshold. Fix each finding or carry it into Open questions; Option A / B if the strategist's call falls (protocol §5 ④b).
+Send `gtm-machine-os:evidence-auditor`: every formula, every threshold and its source, every baseline claim, vanity or actionless metrics, double counting across stages, attribution claims, metrics that can't be captured, and consistency with each upstream threshold. Fix each finding or carry it into Open questions; Option A / B if the strategist's call falls (protocol §5 ④b).
 
 ### 6. Assets
 Write to `products/<slug>/assets/`:
@@ -93,7 +93,7 @@ Write to `products/<slug>/assets/`:
 | `14_diagnosis-table.csv` | Symptom → check metric → likely cause → owning skill → pre-approved first response → re-run recommended? | Running "where did the funnel break" in the meeting |
 
 ### 7. Tracker and present
-Update `00_Playbook-Tracker.md` per protocol §10. "Live" and "on the calendar" boxes are ticked only when the owner confirms the dashboard is built and the events are imported; this skill's specs alone leave them unticked. When a pre-set re-run trigger fires, add `REVIEW-DUE` to that pillar's tracker row (protocol §10.7), never `STALE`. Present per protocol §8. On a first run, next is the Phase 2 gate: `gtm-engine:execution` (its step 7 cross-check). **Then:** the review loop — when a trigger fires or the scheduled review comes due, re-run the pillar it names (`gtm-engine:segmentation`, `icp`, `personas`, `value-prop`, `positioning`, `messaging`, `pricing`, `proof`; Phase 2: `motion`, `revenue-process`, `demand-gen`, `outbound`, `enablement`); re-running that pillar is what stales downstream (protocol §9).
+Update `00_Playbook-Tracker.md` per protocol §10. "Live" and "on the calendar" boxes are ticked only when the owner confirms the dashboard is built and the events are imported; this skill's specs alone leave them unticked. When a pre-set re-run trigger fires, add `REVIEW-DUE` to that pillar's tracker row (protocol §10.7), never `STALE`. Present per protocol §8. On a first run, next is the Phase 2 gate: `gtm-machine-os:execution` (its step 7 cross-check). **Then:** the review loop — when a trigger fires or the scheduled review comes due, re-run the pillar it names (`gtm-machine-os:segmentation`, `icp`, `personas`, `value-prop`, `positioning`, `messaging`, `pricing`, `proof`; Phase 2: `motion`, `revenue-process`, `demand-gen`, `outbound`, `enablement`); re-running that pillar is what stales downstream (protocol §9).
 
 ## Checks before presenting (playbook done-when, then framework output contract)
 - [ ] The KPI dashboard is live, with leading and lagging indicators per stage

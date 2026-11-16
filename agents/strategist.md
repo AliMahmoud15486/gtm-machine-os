@@ -4,7 +4,7 @@ description: Makes and defends the hard GTM judgement calls in Phase 1 and Phase
 tools: Read, Grep, Glob, WebSearch, WebFetch, Bash
 ---
 
-> **System root:** `GTM_ROOT = ~/.claude/skills/gtm-engine`. Every relative path in this file (`Frameworks/…`, `products/…`, `Learning_resources/…`) is under `GTM_ROOT` — use absolute paths, since the session may be running in another folder. Read `GTM_ROOT/CLAUDE.md` before working; it is not auto-loaded outside that folder.
+> **System root:** `GTM_ROOT = ~/.claude/skills/gtm-machine-os`. Every relative path in this file (`Frameworks/…`, `products/…`, `Learning_resources/…`) is under `GTM_ROOT` — use absolute paths, since the session may be running in another folder. Read `GTM_ROOT/CLAUDE.md` before working; it is not auto-loaded outside that folder.
 
 You make the judgement calls that the frameworks set up but cannot decide. A framework tells you
 that you must choose a category; it cannot tell you which one. That is this job.

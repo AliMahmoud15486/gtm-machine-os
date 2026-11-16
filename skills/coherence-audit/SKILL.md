@@ -1,6 +1,6 @@
 ---
 name: coherence-audit
-description: The Phase 1 gate for any product. Audits the completed Phase 1 artifacts (01 segmentation, 02 ICP, 02b buying center & personas, 03 value proposition, 04 positioning, 05 messaging, 06 proof, 07 pricing) and their assets for internal contradiction. Runs seven traces (segment→ICP, pain→driver, driver→pillar, pillar→proof, persona coverage, category→pricing, only-ness→proof→alternatives), a cross-artifact fact-consistency sweep (prices, caps, names, category wording, thresholds repeated in several files), evidence ledger, fabricated-language scan, staleness and lock status, then issues PASS / PASS-WITH-GAPS / FAIL with named breaks and line-level fixes. Deep by default (parallel trace auditors → verification of every major/critical finding). Produces 08_Coherence-Audit.md plus usable assets (trace matrix, findings list, fact-consistency table, decision register, validation backlog) and one PDF strategy report: a section per pillar with the strategy, the owner's decisions and actions. Trigger with "coherence audit", "audit the GTM strategy", "check my GTM for gaps", "is my GTM consistent", "phase 1 gate", or as step 8 of gtm-engine:strategy.
+description: The Phase 1 gate for any product. Audits the completed Phase 1 artifacts (01 segmentation, 02 ICP, 02b buying center & personas, 03 value proposition, 04 positioning, 05 messaging, 06 proof, 07 pricing) and their assets for internal contradiction. Runs seven traces (segment→ICP, pain→driver, driver→pillar, pillar→proof, persona coverage, category→pricing, only-ness→proof→alternatives), a cross-artifact fact-consistency sweep (prices, caps, names, category wording, thresholds repeated in several files), evidence ledger, fabricated-language scan, staleness and lock status, then issues PASS / PASS-WITH-GAPS / FAIL with named breaks and line-level fixes. Deep by default (parallel trace auditors → verification of every major/critical finding). Produces 08_Coherence-Audit.md plus usable assets (trace matrix, findings list, fact-consistency table, decision register, validation backlog) and one PDF strategy report: a section per pillar with the strategy, the owner's decisions and actions. Trigger with "coherence audit", "audit the GTM strategy", "check my GTM for gaps", "is my GTM consistent", "phase 1 gate", or as step 8 of gtm-machine-os:strategy.
 version: 2.2.0
 ---
 
@@ -17,7 +17,7 @@ explicit traces and a hard verdict.
 ## Before anything
 
 Follow the shared protocol. It is part of this skill:
-`~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md`
+`~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md`
 
 | | |
 |---|---|
@@ -67,7 +67,7 @@ that pillar. Copy a customer would see (listing, templates, plan sheet, outreach
 internal notes in severity.
 
 ### 3. The seven traces (deep step ④, in parallel)
-Launch `gtm-engine:evidence-auditor` agents in the background, each with a **small brief that saves as
+Launch `gtm-machine-os:evidence-auditor` agents in the background, each with a **small brief that saves as
 it goes** (protocol §5):
 - **A:** traces 1–3
 - **B:** traces 4 and 7
@@ -126,7 +126,7 @@ believe, (c) holds against do-nothing, DIY, generic vendor and point tool.
 - **Repeated risks** (legal, platform, compliance) are counted once and owned by one artifact.
 
 ### 5. Verify the findings (deep step ④ again)
-Send every **major or critical** finding to a fresh `gtm-engine:evidence-auditor` told to *refute* it:
+Send every **major or critical** finding to a fresh `gtm-machine-os:evidence-auditor` told to *refute* it:
 re-read the cited line, check whether another artifact already resolves it. Drop findings that
 don't survive. **Never invent a break to look thorough.**
 
@@ -143,7 +143,7 @@ don't survive. **Never invent a break to look thorough.**
 1. **Verdict** + a one-paragraph rationale readable on its own.
 2. **Trace table:** seven rows: trace, complete/break, detail.
 3. **Findings**, most severe first: severity (critical/major/minor), artifact + line + quoted text,
-   what breaks, the specific fix (*"re-run gtm-engine:messaging and drop pillar 4"*, not *"improve
+   what breaks, the specific fix (*"re-run gtm-machine-os:messaging and drop pillar 4"*, not *"improve
    alignment"*), who acts (skill re-run / the owner / product owner).
 4. **Fact-consistency summary** (full table in the asset).
 5. **Evidence ledger**, overall and per artifact, with the counting method.
@@ -181,7 +181,7 @@ cards, prints with headless Chrome: `python3 build.py <out.pdf>`).
 ### 8. Present
 Send the strategy report PDF to the owner (SendUserFile). Per protocol §8: verdict first, then the findings that matter, then decisions for the owner. Name the
 re-runs in order. A re-run of any `01`–`07` makes this artifact `STALE`. On PASS or PASS-WITH-GAPS,
-next is Phase 2: `gtm-engine:execution` (or `gtm-engine:motion` directly).
+next is Phase 2: `gtm-machine-os:execution` (or `gtm-machine-os:motion` directly).
 
 ## Rules
 - **Be honest, not harsh.** The purpose is a strategy that survives contact with a buyer.

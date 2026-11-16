@@ -11,7 +11,7 @@ version: 1.0.0
 ## Before anything
 
 Follow the shared protocol. It is part of this skill:
-`~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md`
+`~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md`
 
 | | |
 |---|---|
@@ -63,7 +63,7 @@ If `02_ICP.md` or `02b_…` is missing, **stop** and offer the missing skill (pr
 Read the product's code, config and docs (paths in intake §3). List each capability with its tag and source. Flag any gap between what the marketing copy or listing says and what the code does.
 
 ### 2. Research (deep step ①)
-Small `gtm-engine:researcher` briefs that save as they go (protocol §5):
+Small `gtm-machine-os:researcher` briefs that save as they go (protocol §5):
 - **Alternatives' value claims.** What each alternative in `01_competitors.csv` promises (verbatim from its listing or site, with URL and date), its price, and which drivers it covers. Include the platform's native features and DIY.
 - **Baseline benchmarks.** Public numbers for each candidate driver metric, sourced and tagged by quality. Report absence.
 - **Category evidence.** How buyers search for and name this kind of product: app-store categories, search terms, how competitors self-describe.
@@ -87,7 +87,7 @@ Fill one row per driver: metric, baseline (with source, or `UNKNOWN — needs me
 - State the break-even.
 
 ### 7. Judgement (deep step ③)
-Send `gtm-engine:strategist` the inventory, canvas, scored drivers, ROI and category evidence. Ask for:
+Send `gtm-machine-os:strategist` the inventory, canvas, scored drivers, ROI and category evidence. Ask for:
 - the **final 3–5 drivers** and their order;
 - the **category choice** (conformist / modifier / creator), with the budget line and price sensitivity it implies;
 - **3 UVP hypotheses**, one per Voje formula, to test;
@@ -95,7 +95,7 @@ Send `gtm-engine:strategist` the inventory, canvas, scored drivers, ROI and cate
 - what would flip each call.
 
 ### 8. Attack (deep step ④)
-Send `gtm-engine:evidence-auditor`:
+Send `gtm-machine-os:evidence-auditor`:
 - the drivers, with their attribute and differentiated-value scores;
 - the ROI model, to push it to pessimistic inputs;
 - every capability claim, spot-checked against the code;
@@ -118,7 +118,7 @@ Research goes to `products/<slug>/research/`. Then write to `products/<slug>/ass
 | `03_measurement-backlog.csv` | Each driver metric: baseline source, instrumentation status in the product, what to add, owner, when it will have data. Plus the **PMF measurement plan** (Sean Ellis survey trigger, retention cohort definition) | Engineering and analytics to-dos that make the drivers provable |
 
 ### 10. Present
-Update the tracker (protocol §10), then present per protocol §8. Next skill: `gtm-engine:positioning` (Pillar 3b).
+Update the tracker (protocol §10), then present per protocol §8. Next skill: `gtm-machine-os:positioning` (Pillar 3b).
 
 ## Checks before presenting (framework output contract)
 - [ ] Product truth inventory present; every reliever and driver cites an `Available today` capability
@@ -132,7 +132,7 @@ Update the tracker (protocol §10), then present per protocol §8. Next skill: `
 - [ ] Zero unsourced quotes; every public claim in the register with a status
 - [ ] All six assets written, including `03_value-proposition-statement.md` (linted)
 
-Playbook "Pillar 3 is done when" (tick in `00_Playbook-Tracker.md` per protocol §10, only where the artifact shows it; the positioning, alternatives and validation boxes belong to `gtm-engine:positioning`):
+Playbook "Pillar 3 is done when" (tick in `00_Playbook-Tracker.md` per protocol §10, only where the artifact shows it; the positioning, alternatives and validation boxes belong to `gtm-machine-os:positioning`):
 - [ ] The Value Proposition Canvas is filled for each ICP, using words from 5 customer interviews
 - [ ] 3–5 value drivers are chosen, each with a KPI, a baseline and a target
 - [ ] Every claim is paired with 1–2 proof points and a risk reverser

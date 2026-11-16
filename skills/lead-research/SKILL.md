@@ -11,7 +11,7 @@ It turns Phase 1 (who we sell to and what we say) into a working list. It does *
 
 ## Before anything
 
-Follow the shared protocol: `~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md` (GTM_ROOT, evidence tags, deep mode, small briefs that save as they go, measure a list's yield before sizing it, the owner proposes-and-disposes).
+Follow the shared protocol: `~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md` (GTM_ROOT, evidence tags, deep mode, small briefs that save as they go, measure a list's yield before sizing it, the owner proposes-and-disposes).
 
 | | |
 |---|---|
@@ -19,16 +19,16 @@ Follow the shared protocol: `~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-P
 | **Upstream (required)** | `02_ICP.md` + `assets/02_account-qualifier.md` + `assets/02_search-filters.md` + `assets/02_target-accounts.csv` (who) · `02b_Buying-Center-and-Personas.md` + `assets/02b_role-finder.md` (which humans, which channel) · `05_Messaging-and-Channels.md` + `assets/05_channel-plan.md` + `assets/05_copy-kit.md` (**channels, caps, legal gates**, copy) · `assets/03_value-proposition-statement.md` (claims that may be said) |
 | **Upstream (if present)** | `06_Proof-System.md` (what proof may be cited), `08_decision-register.md` (open channel/legal decisions) |
 | **Writes** | `products/<slug>/leads/` only |
-| **Market references** | `references/market-<CC>.md` in this skill (e.g. `market-KSA.md`: sources, prices, legal rules). If none exists for the target market, run a `gtm-engine:researcher` brief to create one before step 1 |
+| **Market references** | `references/market-<CC>.md` in this skill (e.g. `market-KSA.md`: sources, prices, legal rules). If none exists for the target market, run a `gtm-machine-os:researcher` brief to create one before step 1 |
 | **Tools** | `scripts/storefront_scan.py` (this skill) · `templates/lead-config.example.json` · WebSearch / WebFetch · Apollo MCP (free lookup and people search; **credits only with approval**) · Apify MCP (**paid per result; only with approval**) |
 
-If `02_ICP.md` or `02b` is missing, stop and offer `gtm-engine:icp` / `gtm-engine:personas`. If `05` has no channel plan, L3 is drafted against `Frameworks/10` only and marked `ASSUMED`.
+If `02_ICP.md` or `02b` is missing, stop and offer `gtm-machine-os:icp` / `gtm-machine-os:personas`. If `05` has no channel plan, L3 is drafted against `Frameworks/10` only and marked `ASSUMED`.
 
-**Phase 2 gate** (protocol §3): if `08_Coherence-Audit.md` exists and its verdict is **FAIL**, stop and offer `gtm-engine:coherence-audit`.
+**Phase 2 gate** (protocol §3): if `08_Coherence-Audit.md` exists and its verdict is **FAIL**, stop and offer `gtm-machine-os:coherence-audit`.
 
 ## The compliance gate (read first, every run)
 
-1. **The product's own legal gate wins.** Read `assets/12_legal-gate.csv` if `gtm-engine:outbound` has written it (it is the per-country × channel gate and supersedes the rest), else `05_channel-plan.md` (and the decision register), for: allowed channels, caps, which addresses are allowed (e.g. *business-domain only*), banned methods (e.g. *no scraping of addresses, no finder tools*), and any lawyer question still open. Apply them literally. If the plan forbids a method, the skill names it as *not used* and why.
+1. **The product's own legal gate wins.** Read `assets/12_legal-gate.csv` if `gtm-machine-os:outbound` has written it (it is the per-country × channel gate and supersedes the rest), else `05_channel-plan.md` (and the decision register), for: allowed channels, caps, which addresses are allowed (e.g. *business-domain only*), banned methods (e.g. *no scraping of addresses, no finder tools*), and any lawyer question still open. Apply them literally. If the plan forbids a method, the skill names it as *not used* and why.
 2. **Company data vs personal data.** L1 reads public business facts (platform, payments, registration numbers, social accounts, app). L2 is personal data: collect the **minimum** — role, and a name/business contact only when (a) the company publishes it as its contact, or (b) a B2B data provider supplies it under its terms **and** the product's gate allows that provider. Never personal mobiles, never home addresses, never aggregating one person across sites, never sensitive data.
 3. **No automated address harvesting where the market bans it** (e.g. Saudi CST rules). The scanner records *whether* a contact email is published and its kind (own-domain / free-provider / other), not the address. A human copies the address at the source URL, at send time, after the gate check.
 4. **Cold messaging channels follow the product plan.** If cold WhatsApp / DMs / calls are excluded there, they are excluded here. Every email carries identification and a working opt-out; record opt-outs as permanent suppressions.
@@ -77,7 +77,7 @@ Per persona × stage (cold → replied → interview/demo → trial → customer
 Write `leads/L3_nurture-plan.md` and `leads/L3_sequence-copy.md`, and lint the copy with the product's linter if it exists (`assets/05_copy-lint.py`).
 
 ### 5. Attack (deep step ④)
-Send `gtm-engine:evidence-auditor`: a sample of 10 L1 rows (re-check verdicts against the live storefronts), the L2 file (gate compliance, no personal data beyond the rule, sources real), the L3 copy (claims vs the register, banned phrases, personalisation tokens traceable), and the yield arithmetic. Fix or carry into Open questions.
+Send `gtm-machine-os:evidence-auditor`: a sample of 10 L1 rows (re-check verdicts against the live storefronts), the L2 file (gate compliance, no personal data beyond the rule, sources real), the L3 copy (claims vs the register, banned phrases, personalisation tokens traceable), and the yield arithmetic. Fix or carry into Open questions.
 
 ### 6. Log and present
 `leads/leads-log.md`: date, sources run, N scanned, yield per source, credits/money spent (0 unless approved), connections still missing, gate rules applied. Update the tracker's Pillar 9 row per protocol §10 (only the list boxes `leads/` shows), then present per protocol §8: list size by tier, yield per source, contact-route coverage, what needs the owner (credits, connections, legal), and the next send window under the channel cap.

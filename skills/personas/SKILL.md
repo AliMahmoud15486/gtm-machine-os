@@ -12,7 +12,7 @@ ICP = company (Pillar 2a). Persona = human. Keep the two apart.
 ## Before anything
 
 Follow the shared protocol. It is part of this skill:
-`~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md`
+`~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md`
 
 | | |
 |---|---|
@@ -24,7 +24,7 @@ Follow the shared protocol. It is part of this skill:
 
 **Business Profile** (protocol §3): `00_Discovery.md` missing, or any of P1–P5 unknown → stop. Apply the Pillar 2 defaults in `GTM_ROOT/Playbook/SPINE.md` ("How the profile changes each pillar"; if none are listed, say so) and state them in the artifact's `**Profile:**` header line. A departure is a `PROPOSED` decision with its reason.
 
-If `02_ICP.md` is missing, **stop** and offer `gtm-engine:icp` (protocol §3). A legacy
+If `02_ICP.md` is missing, **stop** and offer `gtm-machine-os:icp` (protocol §3). A legacy
 `02_ICP-and-Buying-Center.md` is read as input for its buying-center and persona sections. Once
 `02b` is written, add `Superseded for buying center & personas by 02b_… (YYYY-MM-DD)` at its top.
 
@@ -51,7 +51,7 @@ If `02_ICP.md` is missing, **stop** and offer `gtm-engine:icp` (protocol §3). A
 From `02_ICP.md`: company size, ownership, team, and how the product is bought (self-serve app store / trial / procurement / sales-led). Predict which roles collapse into one person. State it as `ASSUMED` until research or interviews confirm it.
 
 ### 2. Research (deep step ①)
-Launch `gtm-engine:researcher`, in the background, as **small briefs that save as they go** (protocol §5):
+Launch `gtm-machine-os:researcher`, in the background, as **small briefs that save as they go** (protocol §5):
 - **Role brief.** What job titles and team shapes exist at ICP accounts.
   - Sources: company team/about pages, LinkedIn company pages, job postings, commercial-register data where public.
   - Who installs tools, who handles customers, who handles logistics, who pays.
@@ -69,7 +69,7 @@ One card per role that has veto power or is the primary user, using the rule 4 f
 - **Top objection.**
 
 ### 5. Judgement (deep step ③)
-Send `gtm-engine:strategist` the map, the persona cards and the research. Ask for:
+Send `gtm-machine-os:strategist` the map, the persona cards and the research. Ask for:
 - **the primary persona to design for**, meaning whose problem the product and copy lead with;
 - **the champion**;
 - **who can kill the deal and how to pre-empt them**;
@@ -77,7 +77,7 @@ Send `gtm-engine:strategist` the map, the persona cards and the research. Ask fo
 - what would flip the call.
 
 ### 6. Attack (deep step ④)
-Send `gtm-engine:evidence-auditor`:
+Send `gtm-machine-os:evidence-auditor`:
 - every persona field carrying weight;
 - every quote, to verify against its source and check it is attributed to the right role;
 - the awareness levels;
@@ -97,7 +97,7 @@ Research goes to `products/<slug>/research/` (protocol §5). Then write to `prod
 | `02b_role-finder.md` | Per role: titles (Arabic and English where relevant), where to find the role through business channels, measured identification yield, and the **opening line by channel** (as a question, not a pitch) | Getting the first conversations booked |
 
 ### 8. Present
-Update the tracker (protocol §10), then present per protocol §8. Next skill: `gtm-engine:value-prop` (Pillar 3a).
+Update the tracker (protocol §10), then present per protocol §8. Next skill: `gtm-machine-os:value-prop` (Pillar 3a).
 
 ## Checks before presenting (framework output contract, items 5–6)
 - [ ] All six roles plus champion and external influencers are present; empty roles say "none identified" with the reason
@@ -111,5 +111,5 @@ Update the tracker (protocol §10), then present per protocol §8. Next skill: `
 - [ ] Discovery script questions each link to a named assumption
 - [ ] All four assets written
 
-Playbook "Pillar 2 is done when" (tick in `00_Playbook-Tracker.md` per protocol §10, only where the artifact shows it; the other Pillar 2 boxes belong to `gtm-engine:icp`):
+Playbook "Pillar 2 is done when" (tick in `00_Playbook-Tracker.md` per protocol §10, only where the artifact shows it; the other Pillar 2 boxes belong to `gtm-machine-os:icp`):
 - [ ] The buying center is mapped: all six roles, who signs and who can block

@@ -1,10 +1,10 @@
 ---
 name: strategy
-description: Run Phase 1 (Strategy) of the GTM Engine for a product — the six-pillar chain from market segmentation through ICP, buying center, value proposition, positioning, messaging, proof system, and pricing. Produces locked, evidence-tagged artifacts in products/<slug>/. Step-addressable, so a single pillar can be re-run without redoing the chain. Orchestrates the per-pillar skills (gtm-engine:segmentation, gtm-engine:icp, …) in order. Trigger with "run GTM strategy for X", "run the whole GTM chain for X", "GTM Phase 1".
+description: Run Phase 1 (Strategy) of the GTM Machine OS for a product — the six-pillar chain from market segmentation through ICP, buying center, value proposition, positioning, messaging, proof system, and pricing. Produces locked, evidence-tagged artifacts in products/<slug>/. Step-addressable, so a single pillar can be re-run without redoing the chain. Orchestrates the per-pillar skills (gtm-machine-os:segmentation, gtm-machine-os:icp, …) in order. Trigger with "run GTM strategy for X", "run the whole GTM chain for X", "GTM Phase 1".
 version: 1.0.0
 ---
 
-> **System root:** `GTM_ROOT = ~/.claude/skills/gtm-engine`. Every relative path in this file (`Frameworks/…`, `products/…`, `Learning_resources/…`) is under `GTM_ROOT` — use absolute paths, since the session may be running in another folder. Read `GTM_ROOT/CLAUDE.md` before working; it is not auto-loaded outside that folder.
+> **System root:** `GTM_ROOT = ~/.claude/skills/gtm-machine-os`. Every relative path in this file (`Frameworks/…`, `products/…`, `Learning_resources/…`) is under `GTM_ROOT` — use absolute paths, since the session may be running in another folder. Read `GTM_ROOT/CLAUDE.md` before working; it is not auto-loaded outside that folder.
 
 # GTM Strategy — Phase 1 engine
 
@@ -55,7 +55,7 @@ lives in one place so that improving it improves every past and future run.
 
 ## Step 0 — Discovery, then intake
 
-**Run `gtm-engine:discovery` first.** If `products/<slug>/00_Discovery.md` is missing, stop and
+**Run `gtm-machine-os:discovery` first.** If `products/<slug>/00_Discovery.md` is missing, stop and
 offer it; if it exists but its readiness is `NOT READY`, stop and show its ★ questions. Discovery
 fills `00_Intake.md`; this step only confirms it with the owner. Every pillar cites `00_Discovery.md` and
 `assets/00_fact-base.csv` instead of rediscovering the company.
@@ -86,15 +86,15 @@ re-marked `STALE` and re-audited.
 
 | Step | Pillar | Framework | Artifact |
 |---|---|---|---|
-| 1 | Market Segmentation & Targeting | `01_Segmentation-and-Targeting.md` | `01_Segmentation.md` — **run the `gtm-engine:segmentation` skill** |
-| 2a | ICP | `02_ICP-and-Buying-Center.md` | `02_ICP.md` — **run the `gtm-engine:icp` skill** |
-| 2b | Buying Center & Personas | `02_ICP-and-Buying-Center.md` | `02b_Buying-Center-and-Personas.md` — **run the `gtm-engine:personas` skill** |
-| 3 | Value Proposition | `03_Value-Proposition.md` | `03_Value-Proposition.md` — **run the `gtm-engine:value-prop` skill** |
-| 4 | Positioning | `04_Positioning.md` | `04_Positioning.md` — **run the `gtm-engine:positioning` skill** |
-| 5 | Messaging & Channels | `05_Messaging-and-Channels.md` | `05_Messaging-and-Channels.md` — **run the `gtm-engine:messaging` skill** |
-| 6 | Proof System | `06_Proof-System.md` | `06_Proof-System.md` — **run the `gtm-engine:proof` skill** |
-| 7 | Pricing & Packaging | `07_Pricing-and-Packaging.md` | `07_Pricing-and-Packaging.md` — **run the `gtm-engine:pricing` skill** |
-| 8 | **Coherence audit** | — | `08_Coherence-Audit.md` — run `gtm-engine:coherence-audit` |
+| 1 | Market Segmentation & Targeting | `01_Segmentation-and-Targeting.md` | `01_Segmentation.md` — **run the `gtm-machine-os:segmentation` skill** |
+| 2a | ICP | `02_ICP-and-Buying-Center.md` | `02_ICP.md` — **run the `gtm-machine-os:icp` skill** |
+| 2b | Buying Center & Personas | `02_ICP-and-Buying-Center.md` | `02b_Buying-Center-and-Personas.md` — **run the `gtm-machine-os:personas` skill** |
+| 3 | Value Proposition | `03_Value-Proposition.md` | `03_Value-Proposition.md` — **run the `gtm-machine-os:value-prop` skill** |
+| 4 | Positioning | `04_Positioning.md` | `04_Positioning.md` — **run the `gtm-machine-os:positioning` skill** |
+| 5 | Messaging & Channels | `05_Messaging-and-Channels.md` | `05_Messaging-and-Channels.md` — **run the `gtm-machine-os:messaging` skill** |
+| 6 | Proof System | `06_Proof-System.md` | `06_Proof-System.md` — **run the `gtm-machine-os:proof` skill** |
+| 7 | Pricing & Packaging | `07_Pricing-and-Packaging.md` | `07_Pricing-and-Packaging.md` — **run the `gtm-machine-os:pricing` skill** |
+| 8 | **Coherence audit** | — | `08_Coherence-Audit.md` — run `gtm-machine-os:coherence-audit` |
 
 *(Artifact 06/07 numbering follows the pillar order — Proof is pillar 5, Pricing is pillar 6 (the
 playbook order, decided by the owner 2026-11-15) — and now matches the framework files 06/07. Proof runs
@@ -126,10 +126,10 @@ never run a step inline.** This orchestrator only sequences the skills, checks t
 
 - **Fast**: a single pass, without the subagents. Good for a first draft or a small product. The
   header says so, and a fast-mode artifact can't be `LOCKED` until its auditor pass has run.
-- **Deep**: delegate to this plugin's subagents (`gtm-engine:researcher`, `gtm-engine:strategist`, `gtm-engine:evidence-auditor`):
-  - `gtm-engine:researcher` for competitor, market-size, and buyer-language research
-  - `gtm-engine:evidence-auditor` to adversarially challenge every claim before it's locked
-  - `gtm-engine:strategist` for the hard judgement calls (category choice, only-ness, segment tradeoffs)
+- **Deep**: delegate to this plugin's subagents (`gtm-machine-os:researcher`, `gtm-machine-os:strategist`, `gtm-machine-os:evidence-auditor`):
+  - `gtm-machine-os:researcher` for competitor, market-size, and buyer-language research
+  - `gtm-machine-os:evidence-auditor` to adversarially challenge every claim before it's locked
+  - `gtm-machine-os:strategist` for the hard judgement calls (category choice, only-ness, segment tradeoffs)
 
   Deep mode costs more and is worth it for a product the owner is actually going to spend money on.
 
@@ -167,7 +167,7 @@ instrumentation in before the first customer is the entire value of running this
 the price sits between them. Pricing reads Proof's risk-reversal choice and sets its commercial
 terms (pilot fee, guarantee conditions). It does not re-choose the risk reversal.
 
-**Step 8 — Coherence audit.** Invoke `gtm-engine:coherence-audit`. Phase 1 is not complete until it
+**Step 8 — Coherence audit.** Invoke `gtm-machine-os:coherence-audit`. Phase 1 is not complete until it
 passes. This is the step that catches the strategy being six good documents that contradict each
 other.
 
@@ -176,5 +176,5 @@ other.
 Phase 1 is done when all eight artifacts (`01`, `02`, `02b`, `03`–`07`) exist, each satisfies its output contract and its
 done-when list in `00_Playbook-Tracker.md`, the coherence audit passes, and the owner has locked the
 decisions. Update `00_Intake.md` and the tracker with the status and date. Then offer Phase 2:
-`gtm-engine:execution`. Report: what was decided, what remains assumed, and what must be validated
+`gtm-machine-os:execution`. Report: what was decided, what remains assumed, and what must be validated
 before spending money on execution.

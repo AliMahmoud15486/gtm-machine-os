@@ -12,7 +12,7 @@ Strategy says who and why. The motion is the sequence of channels, roles, tools 
 ## Before anything
 
 Follow the shared protocol. It is part of this skill:
-`~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md`
+`~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md`
 
 | | |
 |---|---|
@@ -23,7 +23,7 @@ Follow the shared protocol. It is part of this skill:
 | **Downstream on re-run** | marks `10` to `15` `STALE` (revenue process, demand gen, outbound, enablement, metrics, execution audit) |
 
 **Phase 2 gate.** Phase 2 executes the locked strategy; it does not remake it.
-- `08_Coherence-Audit.md` missing → **stop**, offer `gtm-engine:coherence-audit`. Verdict `FAIL` → **stop**, name the breaks. `PASS-WITH-GAPS` → proceed, and list the gaps that touch the motion in Open questions.
+- `08_Coherence-Audit.md` missing → **stop**, offer `gtm-machine-os:coherence-audit`. Verdict `FAIL` → **stop**, name the breaks. `PASS-WITH-GAPS` → proceed, and list the gaps that touch the motion in Open questions.
 - Any upstream above missing or `STALE` → stop (protocol §3).
 - State the coherence verdict in the header. Never change ICP, positioning, messaging or pricing here. A conflict (e.g. the motion needs a channel `05` excluded, or `07` ACV can't carry the roles) becomes a **finding for the owning skill**, not an edit.
 
@@ -56,7 +56,7 @@ Follow the shared protocol. It is part of this skill:
 Run the Phase 2 gate. Read the Business Profile and write the `**Profile:**` line with the motion default it sets. Compute ACV per tier (rule 2).
 
 ### 2. Research (deep step ①)
-Small `gtm-engine:researcher` briefs that save as they go. Reuse `04`/`05`/`07` research first.
+Small `gtm-machine-os:researcher` briefs that save as they go. Reuse `04`/`05`/`07` research first.
 - **How alternatives sell:** for the ≥3 alternatives in `04`, record self-serve sign-up, demo request, trial length, partners or resellers, and published pricing visibility. Verbatim, with URL and date. This feeds criterion 6.
 - **Partner and marketplace routes** (only if criterion 5 or P7 points there): real candidate partners or marketplaces, their terms, revenue share, listing rules. Cap at 15 candidates.
 - **Time-to-value:** from product truth (`00`) and docs, not research. Steps from sign-up to first real value, and how long they take.
@@ -68,14 +68,14 @@ Small `gtm-engine:researcher` briefs that save as they go. Reuse `04`/`05`/`07` 
 - Roles table (rule 7), routes table (rule 8), KPIs (rule 9), channel economics (rule 10), downstream scope (rule 11).
 
 ### 4. Judgement (deep step ③)
-Send `gtm-engine:strategist` the criteria scores, the profile, ACV, roles and capacity. Ask for:
+Send `gtm-machine-os:strategist` the criteria scores, the profile, ACV, roles and capacity. Ask for:
 - the **primary motion and layers**, with triggers;
 - **which role to fill first** if capacity is short;
 - the **depth for 7, 9, 10, 11**;
 - what would flip each call.
 
 ### 5. Attack (deep step ④)
-Send `gtm-engine:evidence-auditor`:
+Send `gtm-machine-os:evidence-auditor`:
 - each criterion score and its evidence;
 - the ACV arithmetic and its fit with the motion;
 - the time-to-value claim;
@@ -100,7 +100,7 @@ Research goes to `products/<slug>/research/`. Then write to `products/<slug>/ass
 | `09_partner-terms.md` | Only if a partner route is chosen: candidate partners with URLs, value to each side, margin share, enablement plan, conflict boundary, success metrics by type (Voje ch.7) | Opening a partner conversation with the terms already decided |
 
 ### 7. Tracker and present
-Update the tracker (protocol §10). Then present per protocol §8. Next skill: `gtm-engine:revenue-process` (Pillar 10).
+Update the tracker (protocol §10). Then present per protocol §8. Next skill: `gtm-machine-os:revenue-process` (Pillar 10).
 
 ## Checks before presenting (playbook done-when, then framework output contract)
 - [ ] The motion is chosen with the decision rules, and the reason is written down (deal size, how buyers decide)

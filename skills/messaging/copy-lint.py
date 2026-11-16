@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Copy linter — GTM Engine (generic).
+"""Copy linter — GTM Machine OS (generic).
 
 Usage:  python3 05_copy-lint.py <file> [<file> ...]  [--phrases path/to/05_banned-phrases.txt]
 

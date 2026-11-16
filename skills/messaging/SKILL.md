@@ -12,7 +12,7 @@ Positioning decides; messaging words it. **Messaging never invents a claim that 
 ## Before anything
 
 Follow the shared protocol. It is part of this skill:
-`~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md`
+`~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md`
 
 | | |
 |---|---|
@@ -24,7 +24,7 @@ Follow the shared protocol. It is part of this skill:
 
 **Business Profile** (protocol §3): `00_Discovery.md` missing, or any of P1–P5 unknown → stop. Apply the Pillar 4 defaults in `GTM_ROOT/Playbook/SPINE.md` ("How the profile changes each pillar"; if none are listed, say so) and state them in the artifact's `**Profile:**` header line. A departure is a `PROPOSED` decision with its reason.
 
-If `04_Positioning.md` is missing or STALE, **stop** and offer `gtm-engine:positioning` (protocol §3). If positioning has **open decisions**, build on the recommended option as a stated working assumption. **Isolate every line that depends on it** in a labelled variant, so the owner's choice changes only those lines.
+If `04_Positioning.md` is missing or STALE, **stop** and offer `gtm-machine-os:positioning` (protocol §3). If positioning has **open decisions**, build on the recommended option as a stated working assumption. **Isolate every line that depends on it** in a labelled variant, so the owner's choice changes only those lines.
 
 ## Rules specific to this pillar
 
@@ -64,7 +64,7 @@ If `04_Positioning.md` is missing or STALE, **stop** and offer `gtm-engine:posit
 - **If there are none:** create `interviews/README.md` + `interviews/_capture-template.md` (from `assets/02b_discovery-script.md`'s results table) so the owner can drop notes in.
 
 ### 2. Research (deep step ①)
-Small `gtm-engine:researcher` briefs that save as they go; **reuse `02b` / `04` research first.**
+Small `gtm-machine-os:researcher` briefs that save as they go; **reuse `02b` / `04` research first.**
 - **Channel evidence:** for each candidate channel, is the ICP demonstrably there (counts, sizes), what does it cost, what are the rules? Examples: marketplace listing rules and limits, community posting rules, ad platform minimums.
 - **Copy conventions:** how the top listings and pages in the category are written (length, structure, language register), with examples and sources. Plus any platform copy rules (character limits, banned words, reviewer feedback).
 
@@ -86,7 +86,7 @@ Outer → middle → inner, with evidence. Then the chosen 1–3, each with:
 Then the exclusions, each with its reason.
 
 ### 6. Judgement (deep step ③)
-Send `gtm-engine:strategist` the architecture, matrix and Bullseye. Ask for:
+Send `gtm-machine-os:strategist` the architecture, matrix and Bullseye. Ask for:
 - the **one-liner** (choose among variants);
 - the **channel picks and order**;
 - the **CTA ladder**;
@@ -111,7 +111,7 @@ Copy this skill's `copy-lint.py` to `assets/05_copy-lint.py` and build `05_banne
 - Record per-file results (date, errors / warnings) in the artifact. Errors must be 0. Warnings are human-review items.
 
 ### 9. Attack (deep step ④)
-Send `gtm-engine:evidence-auditor`:
+Send `gtm-machine-os:evidence-auditor`:
 - the copy kit;
 - the matrix;
 - the channel plan;
@@ -141,7 +141,7 @@ Research goes to `products/<slug>/research/`. Then write to `products/<slug>/ass
 | `interviews/README.md` + `interviews/_capture-template.md` | Where interview notes go and in what shape, so this skill (and `02b`/`03`/`04` re-runs) can ingest them | Turning conversations into `VALIDATED` evidence |
 
 ### 11. Present
-Update the tracker (protocol §10), then present per protocol §8. Next skill: `gtm-engine:proof` (Pillar 5).
+Update the tracker (protocol §10), then present per protocol §8. Next skill: `gtm-machine-os:proof` (Pillar 5).
 
 ## Checks before presenting (framework output contract + this skill)
 - [ ] Architecture: category, one-liner, pillars 1:1 with drivers, persona overlays (same claim, different words)

@@ -1,6 +1,6 @@
 ---
 name: execution
-description: Run Phase 2 (Execution) of the GTM Engine for a product — the orchestrator over the six execution skills, in run order — GTM motion (pillar 8), revenue process & SLAs (10), demand generation (7), outbound (9, with lead-research for the lists), enablement (11) and metrics (12) — then the Phase 2 cross-check that proves the six fit together (motion scope, hand-offs, capacity, message and offer fidelity, metric coverage, legal gates, tracker truth). Reads the Business Profile and the motion's downstream scope to decide how deep each pillar goes (full, light, through partners, not now). Step-addressable, so one pillar can be re-run without redoing the chain. Produces the six Phase 2 artifacts (09–14) via their skills plus 15_Execution-Audit.md and a one-page execution plan. Specs and drafts only — never sends, spends, publishes or configures tools. Trigger with "run Phase 2 for X", "run execution for X", "run the GTM execution chain for X", "GTM Phase 2", "what's next after the strategy for X", or after a Phase 1 coherence audit passes.
+description: Run Phase 2 (Execution) of the GTM Machine OS for a product — the orchestrator over the six execution skills, in run order — GTM motion (pillar 8), revenue process & SLAs (10), demand generation (7), outbound (9, with lead-research for the lists), enablement (11) and metrics (12) — then the Phase 2 cross-check that proves the six fit together (motion scope, hand-offs, capacity, message and offer fidelity, metric coverage, legal gates, tracker truth). Reads the Business Profile and the motion's downstream scope to decide how deep each pillar goes (full, light, through partners, not now). Step-addressable, so one pillar can be re-run without redoing the chain. Produces the six Phase 2 artifacts (09–14) via their skills plus 15_Execution-Audit.md and a one-page execution plan. Specs and drafts only — never sends, spends, publishes or configures tools. Trigger with "run Phase 2 for X", "run execution for X", "run the GTM execution chain for X", "GTM Phase 2", "what's next after the strategy for X", or after a Phase 1 coherence audit passes.
 version: 1.0.0
 ---
 
@@ -12,20 +12,20 @@ six execution plans fit together?*
 ## Before anything
 
 Follow the shared protocol. It is part of this skill:
-`~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md`
+`~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md`
 
 | | |
 |---|---|
 | **Map** | `GTM_ROOT/Playbook/SPINE.md` (pillar → framework → skill → artifact, run order, Business Profile defaults) · `GTM_ROOT/Phase2_Execution/README.md` |
 | **Reads** | `00_Discovery.md` §0 Business Profile · `00_Playbook-Tracker.md` · `08_Coherence-Audit.md` (verdict) · every Phase 2 artifact that exists |
-| **Runs** | `gtm-engine:motion` → `gtm-engine:revenue-process` → `gtm-engine:demand-gen` → `gtm-engine:outbound` (+ `gtm-engine:lead-research`) → `gtm-engine:enablement` → `gtm-engine:metrics` |
+| **Runs** | `gtm-machine-os:motion` → `gtm-machine-os:revenue-process` → `gtm-machine-os:demand-gen` → `gtm-machine-os:outbound` (+ `gtm-machine-os:lead-research`) → `gtm-machine-os:enablement` → `gtm-machine-os:metrics` |
 | **Writes** | `products/<slug>/15_Execution-Audit.md` · `assets/15_*` · the tracker's Phase 2 gate row |
 | **Template** | `template.md` in this skill's folder (for `15_Execution-Audit.md`) |
 
 ## Gate (stop and say why)
 
 1. **Profile.** `00_Discovery.md` missing, or Business Profile P1–P5 unknown → stop (protocol §3).
-2. **Phase 1.** `08_Coherence-Audit.md` missing or **FAIL** → stop, offer `gtm-engine:coherence-audit`.
+2. **Phase 1.** `08_Coherence-Audit.md` missing or **FAIL** → stop, offer `gtm-machine-os:coherence-audit`.
    PASS-WITH-GAPS → proceed, and carry its open gaps into every step's header.
 3. **Staleness.** Any of `01`–`07` STALE → stop, name the skill to re-run first.
 4. **Unlocked upstream.** Phase 1 decisions still PROPOSED → proceed only if the owner says so, and every
@@ -45,7 +45,7 @@ Follow the shared protocol. It is part of this skill:
 4. **Re-running a step** stales every later Phase 2 artifact (protocol §9) and this audit. Re-run
    only what changed. "Re-run outbound for X" is valid on its own.
 5. **Lists before outbound.** If `leads/` is missing or older than the current `02`/`02b`, offer
-   `gtm-engine:lead-research` before `gtm-engine:outbound`. Lead research spends credits only after
+   `gtm-machine-os:lead-research` before `gtm-machine-os:outbound`. Lead research spends credits only after
    the owner's yes.
 6. **Nothing external.** No sends, sequences, contacts, ads, pages, automations, CRM or calendar
    changes, from any step. A step that would need one stops and names it as the owner's action.
@@ -57,17 +57,17 @@ Follow the shared protocol. It is part of this skill:
 
 | Step | Pillar | Skill | Artifact | Needs before it |
 |---|---|---|---|---|
-| 1 | 8 GTM Motion | `gtm-engine:motion` | `09_GTM-Motion-and-Routes-to-Market.md` | `08` not FAIL |
-| 2 | 10 Revenue Process & SLAs | `gtm-engine:revenue-process` | `10_Revenue-Process-and-SLAs.md` | `09` |
-| 3 | 7 Demand Generation | `gtm-engine:demand-gen` | `11_Demand-Generation.md` | `09`, and `10` (which runs first in this chain; demand-gen alone can draft without it, marked `ASSUMED`) |
-| 4 | 9 Outbound | `gtm-engine:outbound` (lists: `gtm-engine:lead-research`) | `12_Outbound.md`, `leads/` | `09`, `10` |
-| 5 | 11 Enablement | `gtm-engine:enablement` | `13_Enablement.md` | `09`, `10` (+ `11`, `12` if in scope) |
-| 6 | 12 Metrics | `gtm-engine:metrics` | `14_Metrics-and-Feedback.md` | everything in scope |
+| 1 | 8 GTM Motion | `gtm-machine-os:motion` | `09_GTM-Motion-and-Routes-to-Market.md` | `08` not FAIL |
+| 2 | 10 Revenue Process & SLAs | `gtm-machine-os:revenue-process` | `10_Revenue-Process-and-SLAs.md` | `09` |
+| 3 | 7 Demand Generation | `gtm-machine-os:demand-gen` | `11_Demand-Generation.md` | `09`, and `10` (which runs first in this chain; demand-gen alone can draft without it, marked `ASSUMED`) |
+| 4 | 9 Outbound | `gtm-machine-os:outbound` (lists: `gtm-machine-os:lead-research`) | `12_Outbound.md`, `leads/` | `09`, `10` |
+| 5 | 11 Enablement | `gtm-machine-os:enablement` | `13_Enablement.md` | `09`, `10` (+ `11`, `12` if in scope) |
+| 6 | 12 Metrics | `gtm-machine-os:metrics` | `14_Metrics-and-Feedback.md` | everything in scope |
 | 7 | Gate | this skill — the cross-check below | `15_Execution-Audit.md` | `09`–`14` (or N/A by scope) |
 
 ## Step 7 — the Phase 2 cross-check
 
-Run it in deep mode: one `gtm-engine:evidence-auditor` brief per two traces, in the background,
+Run it in deep mode: one `gtm-machine-os:evidence-auditor` brief per two traces, in the background,
 each saving as it goes (protocol §5). Meanwhile, do the fact sweep and the tracker check yourself.
 
 **Fact sweep.** Every number or name that appears in more than one of `06`, `07` and `09`–`14` (and their
@@ -116,7 +116,7 @@ Per protocol §8, plus:
 
 Phase 2 is done when every in-scope artifact exists and satisfies its done-when list (execution boxes
 excepted until confirmed), the cross-check is PASS or PASS-WITH-GAPS, and the owner has locked the
-decisions. Then the loop is `gtm-engine:metrics`' review cadence, which can send the strategy back
+decisions. Then the loop is `gtm-machine-os:metrics`' review cadence, which can send the strategy back
 to pillars 1–3.
 
 ## Checks before presenting

@@ -1,4 +1,4 @@
-# GTM Engine
+# GTM Machine OS
 
 A Claude Code plugin that runs go-to-market for any B2B product. It covers discovery, 12 strategy
 and execution pillars and two consistency gates. Every claim carries its evidence, an adversarial
@@ -46,10 +46,10 @@ steps ("built", "live", "signed") tick only on the owner's dated confirmation.
 
 | Step | Skill | Writes |
 |---|---|---|
-| 0 | `gtm-engine:discovery` | `00_Discovery.md`, `00_Intake.md`, tracker |
-| Phase 1 | `gtm-engine:strategy` runs `segmentation`, `icp`, `personas`, `value-prop`, `positioning`, `messaging`, `proof`, `pricing` | `01`–`07` |
-| Gate 1 | `gtm-engine:coherence-audit` | `08` |
-| Phase 2 | `gtm-engine:execution` runs `motion`, `revenue-process`, `demand-gen`, `outbound` (+ `lead-research`), `enablement`, `metrics` | `09`–`14`, `leads/` |
+| 0 | `gtm-machine-os:discovery` | `00_Discovery.md`, `00_Intake.md`, tracker |
+| Phase 1 | `gtm-machine-os:strategy` runs `segmentation`, `icp`, `personas`, `value-prop`, `positioning`, `messaging`, `proof`, `pricing` | `01`–`07` |
+| Gate 1 | `gtm-machine-os:coherence-audit` | `08` |
+| Phase 2 | `gtm-machine-os:execution` runs `motion`, `revenue-process`, `demand-gen`, `outbound` (+ `lead-research`), `enablement`, `metrics` | `09`–`14`, `leads/` |
 | Gate 2 | the execution cross-check (inside `execution`) | `15` |
 
 Sub-agents: `researcher` (finds facts, never concludes), `strategist` (makes the call, shows what
@@ -60,10 +60,10 @@ lost) and `evidence-auditor` (attacks the draft from a skeptical-CFO stance).
 Requires [Claude Code](https://claude.com/claude-code).
 
 ```bash
-git clone https://github.com/AliMahmoud15486/gtm-engine.git ~/.claude/skills/gtm-engine
+git clone https://github.com/AliMahmoud15486/gtm-machine-os.git ~/.claude/skills/gtm-machine-os
 ```
 
-Restart Claude Code, then run `/gtm-engine` to see the skill map. Start with plain language:
+Restart Claude Code, then run `/gtm-machine-os` to see the skill map. Start with plain language:
 
 ```
 Start GTM for Acme

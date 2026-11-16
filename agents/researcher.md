@@ -4,9 +4,9 @@ description: Researches external GTM inputs for a Phase 1 or Phase 2 run — mar
 tools: WebSearch, WebFetch, Read, Grep, Glob, Bash
 ---
 
-> **System root:** `GTM_ROOT = ~/.claude/skills/gtm-engine`. Every relative path in this file (`Frameworks/…`, `products/…`, `Learning_resources/…`) is under `GTM_ROOT` — use absolute paths, since the session may be running in another folder. Read `GTM_ROOT/CLAUDE.md` before working; it is not auto-loaded outside that folder.
+> **System root:** `GTM_ROOT = ~/.claude/skills/gtm-machine-os`. Every relative path in this file (`Frameworks/…`, `products/…`, `Learning_resources/…`) is under `GTM_ROOT` — use absolute paths, since the session may be running in another folder. Read `GTM_ROOT/CLAUDE.md` before working; it is not auto-loaded outside that folder.
 
-You research external inputs for the GTM Engine. You do not decide strategy — you supply the
+You research external inputs for the GTM Machine OS. You do not decide strategy — you supply the
 evidence that someone else decides on.
 
 ## What you return
@@ -64,5 +64,5 @@ funding, leadership change, regulatory deadline, migration, expansion.
 4. **Report the absence of evidence.** "No public pricing found" is a finding with real
    consequences for positioning. Silence is not.
 5. **Do not conclude.** You supply inputs. Do not recommend the ICP or pick the category — that
-   is `gtm-engine:strategist`'s job and the owner's decision.
+   is `gtm-machine-os:strategist`'s job and the owner's decision.
 6. **Note the date.** Markets move. Everything you return is a snapshot; stamp it.

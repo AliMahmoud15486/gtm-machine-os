@@ -11,7 +11,7 @@ version: 1.0.0
 ## Before anything
 
 Follow the shared protocol. It is part of this skill:
-`~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md`
+`~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md`
 
 | | |
 |---|---|
@@ -21,7 +21,7 @@ Follow the shared protocol. It is part of this skill:
 | **Template** | `template.md` in this skill's folder |
 | **Downstream on re-run** | marks `12` onward `STALE` (12 Outbound, 13 Enablement, 14 Metrics, 15 Execution Audit) |
 
-**Phase 2 gate.** Phase 2 executes the locked strategy; it does not remake it. Read the `08` verdict and state it in the header. **FAIL → stop**, name the breaks, offer `gtm-engine:coherence-audit`. Missing or STALE `05`, `06`, `07`, `02`, `02b` → stop (protocol §3). Missing `09` → stop and offer `gtm-engine:motion`: the motion decides whether inbound is the main engine or a support. Missing `10` → proceed, but the hand-off threshold and response SLAs are drafted `ASSUMED` and listed as a finding for `gtm-engine:revenue-process`.
+**Phase 2 gate.** Phase 2 executes the locked strategy; it does not remake it. Read the `08` verdict and state it in the header. **FAIL → stop**, name the breaks, offer `gtm-machine-os:coherence-audit`. Missing or STALE `05`, `06`, `07`, `02`, `02b` → stop (protocol §3). Missing `09` → stop and offer `gtm-machine-os:motion`: the motion decides whether inbound is the main engine or a support. Missing `10` → proceed, but the hand-off threshold and response SLAs are drafted `ASSUMED` and listed as a finding for `gtm-machine-os:revenue-process`.
 
 ## Profile defaults (SPINE "How the profile changes each pillar")
 
@@ -31,7 +31,7 @@ Follow the shared protocol. It is part of this skill:
 | P1 Software / SaaS | Trial or demo funnel; **activation is the conversion event** (Frameworks/10 §4). Check time-to-aha fits the trial window (Voje ch.7, Vidyard) |
 | P1 Marketplace / Data-API / Physical / Hybrid | `SOURCE-GAP`: no source gives a funnel map for two-sided, developer or physical-product demand. Pick the nearest map, mark it `ASSUMED`, say why |
 | P2 Retainer / Project | Lead magnet bridges to the front-end offer in `07` (bait → front end). Subscription / Usage: trial, freemium or paid pilot as `07` set it. Transaction: `SOURCE-GAP`, `ASSUMED` |
-| P3 > $3k with strong proof | Map **B** (VSL → application) is allowed. P3 high and TAM small: run the ABM maths (Voje p296: LTV × win rate → accounts); 50–100 accounts → ABM beats inbound, route to `gtm-engine:outbound` |
+| P3 > $3k with strong proof | Map **B** (VSL → application) is allowed. P3 high and TAM small: run the ABM maths (Voje p296: LTV × win rate → accounts); 50–100 accounts → ABM beats inbound, route to `gtm-machine-os:outbound` |
 | P3 < 5K, self-serve (P4) | Direct sign-up or direct booking; scoring and SDR hand-off stay light (per `09`) |
 | P4 buying group 3+ | Nurture per persona from `02b`, each persona's own CTA rung (Frameworks/05 §1D) |
 | P5 before paying customers | Traffic phases 1–2 only (foundation, validation). Scoring from ICP fit + intent, `ASSUMED`; no scaling budget |
@@ -44,13 +44,13 @@ Departing from a default is a `PROPOSED` decision with its reason.
 
 ## Rules specific to this pillar
 
-1. **Execute Phase 1, don't remake it.** Channels come from `05_channel-plan.md`, words from `05_copy-kit.md`, the entry offer and prices from `07`, proof from `06`, triggers from `02`, awareness from `02b`. No new claims. A conflict becomes a finding for the owning skill, never a silent edit. If `05` lacks one capture and one trust channel, propose the pair from `05`'s own Bullseye middle ring as a finding for `gtm-engine:messaging`.
+1. **Execute Phase 1, don't remake it.** Channels come from `05_channel-plan.md`, words from `05_copy-kit.md`, the entry offer and prices from `07`, proof from `06`, triggers from `02`, awareness from `02b`. No new claims. A conflict becomes a finding for the owning skill, never a silent edit. If `05` lacks one capture and one trust channel, propose the pair from `05`'s own Bullseye middle ring as a finding for `gtm-machine-os:messaging`.
 2. **Every stage, six fields.** All 6 lifecycle stages get objective, audience, activity, conversion action, KPI and follow-up. Stages 1–3 are built here; stage 4 hands to `10`; stages 5–6 (retention, expansion, referrals feeding awareness) point to `10` and say so.
 3. **One funnel map for 30 days, no hybrids.** Choose by the playbook's situation table and the profile default. Write the reason and the maps that lost.
 4. **Channel fit = offer × funnel × awareness × intent.** Apply Voje's rule: existing demand → capture first; adjacent demand → piggyback; neither → generate (and say that means months to ROI). Never send an unaware audience to a high-commitment step.
 5. **The lead magnet earns the next step.** One per niche. It bridges to the diagnostic or entry offer from `07`; best is a result on the prospect's own data (Frameworks/06, connections). Landing page: one headline, one problem, one value proposition, benefits, proof, a short form, **one** CTA. Ask only the fields scoring and routing use, plus a consent box where the market requires it.
 6. **Nurture runs on the four pillars** (Frameworks/10): availability plan, speed SLAs (first contact, days to first appointment, reply time), personalised flows per lead category with matched proof, a written week-1 cadence and reminders. Separate flows for booked, unbooked, no-response and no-show. Self-serve products map all of it onto activation (§4). **Every cadence is checked against the consent law of each target market (§3)**; a cold-contact law question stays open, never assumed cleared.
-7. **Inbound leads only.** Outbound-sourced lists and their nurture belong to `gtm-engine:lead-research` (L3) and `gtm-engine:outbound`. Reference them; don't duplicate.
+7. **Inbound leads only.** Outbound-sourced lists and their nurture belong to `gtm-machine-os:lead-research` (L3) and `gtm-machine-os:outbound`. Reference them; don't duplicate.
 8. **Scoring from best customers, threshold from `10`.** Derive traits from real won customers; before customers, from ICP fit + intent signals, tagged `ASSUMED`. The playbook's points are *illustrative*. The hand-off band must equal `10`'s MQL/SQL definition. Routing keeps yellows ("yellows are the new gold").
 9. **Measure throughput, not cost per lead.** Schedule rate, show rate, throughput (or activation rate), qualified conversations, closed deals. Before any paid channel run the channel-economics check (Voje p269–270: CAC vs LTV, LTV ≥ 3× CAC). Unknown → `UNKNOWN — needs measurement`.
 10. **Planning figures are not benchmarks.** The funnel workshop, traffic roadmap and their budgets ($500–$1,000 test, $50/day campaigns, retargeting windows, 30–150 min per step) come from course material not in `Learning_resources/`. Cite them as "Playbook/GTM-Playbook.md, Pillar 7" and label them *planning figures*.
@@ -63,7 +63,7 @@ Departing from a default is a `PROPOSED` decision with its reason.
 Read `08` verdict, `09`, `10`, the Business Profile. Write the profile line and the defaults applied. Read `05`'s channel plan and copy kit, `07`'s entry offer, `06`'s proof map.
 
 ### 2. Research (deep step ①)
-Small `gtm-engine:researcher` briefs that save to `products/<slug>/research/`; reuse `05` channel evidence first.
+Small `gtm-machine-os:researcher` briefs that save to `products/<slug>/research/`; reuse `05` channel evidence first.
 - **Channel mechanics and rules** for the two chosen channels: ad platform minimums and policies, WhatsApp Business opt-in and template rules, directory or marketplace listing rules.
 - **Consent law per P7 market:** calls, texts, WhatsApp, email, cookies and retargeting pixels. Primary sources.
 - **Competitor funnels:** lead magnets, CTAs, forms and offers they run, quoted verbatim with URL and date.
@@ -72,10 +72,10 @@ Small `gtm-engine:researcher` briefs that save to `products/<slug>/research/`; r
 Funnel brief (playbook step 1) → 6-stage plan → funnel map → channel pair and awareness × channel fit → lead magnet, landing and thank-you specs with copy from the kit → nurture flows, availability and speed SLAs → scoring bands and routing → traffic phase and validation test plan → 12-step build with outputs and owners → launch QA (unrun) → 30-day sprint with 3 experiments, thresholds and stop rules set now.
 
 ### 4. Judgement (deep step ③)
-Send `gtm-engine:strategist` the brief, stage plan, map options, channel pair and scoring. Ask for: the **funnel map**; the **lead magnet** per niche; the **scoring threshold and routing**; the **3 experiments**; what would flip each call.
+Send `gtm-machine-os:strategist` the brief, stage plan, map options, channel pair and scoring. Ask for: the **funnel map**; the **lead magnet** per niche; the **scoring threshold and routing**; the **3 experiments**; what would flip each call.
 
 ### 5. Attack (deep step ④)
-Send `gtm-engine:evidence-auditor`: every copy line against the claims register (and run `assets/05_copy-lint.py`); cadences against each market's consent rules; scoring arithmetic and threshold vs `10`; budget lines labelled as planning figures; consistency with `05`/`06`/`07`/`09`/`10`. Fix each finding, or carry it into Open questions; Option A/B if the strategist's call falls (protocol §5 ④b).
+Send `gtm-machine-os:evidence-auditor`: every copy line against the claims register (and run `assets/05_copy-lint.py`); cadences against each market's consent rules; scoring arithmetic and threshold vs `10`; budget lines labelled as planning figures; consistency with `05`/`06`/`07`/`09`/`10`. Fix each finding, or carry it into Open questions; Option A/B if the strategist's call falls (protocol §5 ④b).
 
 ### 6. Assets
 Write to `products/<slug>/assets/`:
@@ -93,7 +93,7 @@ Write to `products/<slug>/assets/`:
 | `11_30-day-sprint.csv` | 1 funnel, 2 channels, ≤3 experiments: hypothesis, asset, KPI, threshold, stop rule, review date | Running and judging the sprint |
 
 ### 7. Present
-Update the tracker (protocol §10), then present per protocol §8. Next skill: `gtm-engine:outbound` (Pillar 9).
+Update the tracker (protocol §10), then present per protocol §8. Next skill: `gtm-machine-os:outbound` (Pillar 9).
 
 ## Checks before presenting (playbook "Pillar 7 is done when" + this skill)
 - [ ] Each funnel stage has an objective, audience, activity, conversion action, KPI and follow-up

@@ -7,12 +7,12 @@ version: 1.0.0
 # GTM ICP — Pillar 2a
 
 **Answers:** *which companies, inside the beachhead, are the best fit — and which are not?*
-ICP = **company**. The humans inside it are `gtm-engine:personas` (Pillar 2b). Keep them apart.
+ICP = **company**. The humans inside it are `gtm-machine-os:personas` (Pillar 2b). Keep them apart.
 
 ## Before anything
 
 Follow the shared protocol — it is part of this skill:
-`~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md`
+`~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md`
 
 | | |
 |---|---|
@@ -24,7 +24,7 @@ Follow the shared protocol — it is part of this skill:
 
 **Business Profile** (protocol §3): `00_Discovery.md` missing, or any of P1–P5 unknown → stop. Apply the Pillar 2 defaults in `GTM_ROOT/Playbook/SPINE.md` ("How the profile changes each pillar"; if none are listed, say so) and state them in the artifact's `**Profile:**` header line. A departure is a `PROPOSED` decision with its reason.
 
-If `01_Segmentation.md` is missing, **stop** and offer `gtm-engine:segmentation` (protocol §3). A legacy
+If `01_Segmentation.md` is missing, **stop** and offer `gtm-machine-os:segmentation` (protocol §3). A legacy
 `02_ICP-and-Buying-Center.md` is read as input; once `02_ICP.md` is written, add a line at the top
 of the legacy file: `Superseded for ICP by 02_ICP.md (YYYY-MM-DD)`.
 
@@ -43,7 +43,7 @@ step 1) and look for shared attributes. Those patterns are `VALIDATED`. If there
 and move on — do not simulate a customer base.
 
 ### 3. Research — deep step ①
-Launch `gtm-engine:researcher` in the background with:
+Launch `gtm-machine-os:researcher` in the background with:
 - **Trigger brief:** observable events that precede buying in this category, and how each is
   detected (job posts, funding, tool migration, regulation, leadership change) with a tool or
   source per trigger.
@@ -69,7 +69,7 @@ optional; they predict churn. Each cell: score, reason, tag. Choose the winner. 
 (within ~0.3) go to the strategist as a genuine tie.
 
 ### 6. Judgement — deep step ③
-Send `gtm-engine:strategist` the weights, the scored table and the research. Ask for: the ICP (one),
+Send `gtm-machine-os:strategist` the weights, the scored table and the research. Ask for: the ICP (one),
 the losers and why, **the anti-ICP**, and what would flip the choice.
 
 ### 7. Go deep on the winner only
@@ -84,7 +84,7 @@ the losers and why, **the anti-ICP**, and what would flip the choice.
 - **Validation status** — which of the framework's four validation steps have actually run.
 
 ### 8. Attack — deep step ④
-Send `gtm-engine:evidence-auditor` the winning scores, the anti-ICP, the trigger claims, **every company
+Send `gtm-machine-os:evidence-auditor` the winning scores, the anti-ICP, the trigger claims, **every company
 in the target-account list (spot-check it exists and fits)**, and the strategist's ICP choice. Fix
 or carry every non-surviving claim into Open questions. If the audit undermines the chosen ICP,
 present Option A / Option B per protocol §5 ④b.
@@ -105,7 +105,7 @@ usable size?" — and (b) enrich `02_target-accounts.csv`. State the credit cost
 a yes. Never create contacts or sequences.
 
 ### 10. Present
-Update the tracker (protocol §10), then present per protocol §8. Next skill: `gtm-engine:personas` (buying center + personas).
+Update the tracker (protocol §10), then present per protocol §8. Next skill: `gtm-machine-os:personas` (buying center + personas).
 
 ## Checks before presenting (framework output contract, ICP items)
 - [ ] Mode stated (ICP / ECP) with reason
@@ -119,7 +119,7 @@ Update the tracker (protocol §10), then present per protocol §8. Next skill: `
 - [ ] Every list method shows a measured yield (`PASS n / checked N`); no pool from multiplied borrowed rates
 - [ ] All four assets written
 
-Playbook "Pillar 2 is done when" (tick in `00_Playbook-Tracker.md` per protocol §10, only where the artifact shows it; the buying-center box belongs to `gtm-engine:personas`):
+Playbook "Pillar 2 is done when" (tick in `00_Playbook-Tracker.md` per protocol §10, only where the artifact shows it; the buying-center box belongs to `gtm-machine-os:personas`):
 - [ ] The 10–20 best customers are pulled and 5–10 champions interviewed
 - [ ] Candidate ICPs pass the operational-fit filter and are scored on the six dimensions
 - [ ] The ICP statement is written from the template

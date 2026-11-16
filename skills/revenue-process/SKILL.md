@@ -11,7 +11,7 @@ version: 1.0.0
 ## Before anything
 
 Follow the shared protocol. It is part of this skill:
-`~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md`
+`~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md`
 
 | | |
 |---|---|
@@ -22,8 +22,8 @@ Follow the shared protocol. It is part of this skill:
 | **Downstream on re-run** | marks `11_Demand-Generation`, `12_Outbound`, `13_Enablement`, `14_Metrics-and-Feedback`, `15_Execution-Audit` `STALE` (protocol §9, §10.4) |
 
 **Gate.** Phase 2 executes the locked strategy; it does not remake it.
-- `09` missing or STALE → **stop**, offer `gtm-engine:motion`. The motion decides the depth of this pillar.
-- `08_Coherence-Audit.md` missing → stop, offer `gtm-engine:coherence-audit`. Verdict **FAIL** → stop and name the breaks. **PASS-WITH-GAPS** → proceed and repeat the gaps in Open questions. State the verdict in the header.
+- `09` missing or STALE → **stop**, offer `gtm-machine-os:motion`. The motion decides the depth of this pillar.
+- `08_Coherence-Audit.md` missing → stop, offer `gtm-machine-os:coherence-audit`. Verdict **FAIL** → stop and name the breaks. **PASS-WITH-GAPS** → proceed and repeat the gaps in Open questions. State the verdict in the header.
 - Any consumed Phase 1 artifact STALE → stop (protocol §3).
 - This skill never changes ICP, personas, positioning, messaging, pricing or proof decisions. A conflict (e.g. the pilot this process needs is not in `07`'s offer architecture) becomes a finding for the owning skill, listed in Open questions.
 
@@ -63,7 +63,7 @@ Where none of the frameworks gives a rule for the profile, write `SOURCE-GAP` an
 Run the gate. Read the profile and `09`. Write the depth decision: which stages apply, compressed how, and who owns each (from `09`'s roles).
 
 ### 2. Research (deep step ①)
-Small `gtm-engine:researcher` briefs that save to `products/<slug>/research/` as they go; reuse earlier research first.
+Small `gtm-machine-os:researcher` briefs that save to `products/<slug>/research/` as they go; reuse earlier research first.
 - **Consent and contact rules** for calls, texts, messaging apps and email in each P7 market, from primary sources — they bound the cadences and triggers.
 - **The current tool stack** (from `00_Discovery`): which CRM or tracker exists, what its plan allows (stages, required fields, workflows). The spec stays tool-agnostic; this only adds a mapping note.
 - **Buyer-side process facts** for the ICP: procurement, security or legal review steps, typical approval paths (`02b` first; external only to fill gaps).
@@ -79,10 +79,10 @@ Small `gtm-engine:researcher` briefs that save to `products/<slug>/research/` as
 - **Handoff** (Problem → People → Plan → Pitfalls), 30/60/90 plan, onboarding day plan, retention and expansion triggers by P2, **reporting cadence** (weekly sales feedback; rep or founder dashboard: show rate, close rate, lead-to-close; monthly outcome report; QBRs where P2 has a renewal).
 
 ### 4. Judgement (deep step ③)
-Send `gtm-engine:strategist` the depth decision, stage map, framework choice, SLA arithmetic and pilot terms. Ask for: the recommended compression (or all ten), the qualification framework, the SLA targets the capacity can hold, whether stage 7 runs, the human-step thresholds — each with the alternatives that lost and what would flip it.
+Send `gtm-machine-os:strategist` the depth decision, stage map, framework choice, SLA arithmetic and pilot terms. Ask for: the recommended compression (or all ten), the qualification framework, the SLA targets the capacity can hold, whether stage 7 runs, the human-step thresholds — each with the alternatives that lost and what would flip it.
 
 ### 5. Attack (deep step ④)
-Send `gtm-engine:evidence-auditor`: every exit criterion (observable?), the capacity arithmetic, every SLA's basis and tag, consent claims, the scripts (fabricated language, banned phrases, drift from `05`), consistency with `07` Entry/terms, `06` risk reversal and `02b` roles. Fix each finding or carry it into Open questions; Option A / B if the audit undermines the strategist (protocol §5 ④b).
+Send `gtm-machine-os:evidence-auditor`: every exit criterion (observable?), the capacity arithmetic, every SLA's basis and tag, consent claims, the scripts (fabricated language, banned phrases, drift from `05`), consistency with `07` Entry/terms, `06` risk reversal and `02b` roles. Fix each finding or carry it into Open questions; Option A / B if the audit undermines the strategist (protocol §5 ④b).
 
 ### 6. Assets
 Write to `products/<slug>/assets/`:
@@ -101,7 +101,7 @@ Write to `products/<slug>/assets/`:
 | `10_handoff-and-onboarding.md` | Handoff doc, 30/60/90 plan, onboarding day plan, success memo, retention/expansion triggers, reporting cadence | Stages 9–10 and the monthly report |
 
 ### 7. Tracker and present
-Update `00_Playbook-Tracker.md` per protocol §10 (rule 10 governs the "live / agreed / signed" boxes). Then present per protocol §8. Next skill: `gtm-engine:demand-gen` (Pillar 7).
+Update `00_Playbook-Tracker.md` per protocol §10 (rule 10 governs the "live / agreed / signed" boxes). Then present per protocol §8. Next skill: `gtm-machine-os:demand-gen` (Pillar 7).
 
 ## Checks before presenting
 Playbook "Pillar 10 is done when" (the artifact must show each; execution boxes per rule 10):

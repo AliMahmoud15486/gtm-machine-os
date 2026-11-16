@@ -1,11 +1,11 @@
 # The Spine — playbook → method → skill → artifact
 
-One map that ties the GTM Engine together for any B2B project.
+One map that ties the GTM Machine OS together for any B2B project.
 
 - **Playbook** ([`GTM-Playbook.md`](GTM-Playbook.md)) — the manual. Read it to know *what* each
   pillar decides and when it is done. Never filled in.
 - **Frameworks** ([`../Frameworks/`](../Frameworks/)) — the method in depth, cited to source.
-- **Skills** (`gtm-engine:*`) — the engines that run a pillar for one project.
+- **Skills** (`gtm-machine-os:*`) — the engines that run a pillar for one project.
 - **Artifacts** (`products/<slug>/`) — one project's answers.
 - **Tracker** (`products/<slug>/00_Playbook-Tracker.md`) — where that project stands on all
   12 pillars, with each pillar's "done when" list. Template:
@@ -33,7 +33,7 @@ One map that ties the GTM Engine together for any B2B project.
 
 **Orchestrators:** `strategy` runs Phase 1 (discovery check → 1–6 → coherence gate); `execution` runs Phase 2 (motion → … → metrics → Phase 2 gate). Either can run one step on its own.
 
-Framework files are in `../Frameworks/`. Skill names are short for `gtm-engine:<name>`.
+Framework files are in `../Frameworks/`. Skill names are short for `gtm-machine-os:<name>`.
 
 ## Run order
 

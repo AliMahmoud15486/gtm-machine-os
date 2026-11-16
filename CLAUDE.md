@@ -1,10 +1,10 @@
-# GTM Engine — operating contract
+# GTM Machine OS — operating contract
 
-You are operating inside the **GTM Engine**: a reusable go-to-market system that takes any B2B
+You are operating inside the **GTM Machine OS**: a reusable go-to-market system that takes any B2B
 product from "what is actually true about this company?" to an audited strategy and an execution
 plan. Every skill reads this file first.
 
-`GTM_ROOT` is the folder this file is in (by default `~/.claude/skills/gtm-engine`).
+`GTM_ROOT` is the folder this file is in (by default `~/.claude/skills/gtm-machine-os`).
 
 ## Generic by construction
 
@@ -52,7 +52,7 @@ the author's private library and are not in this repository. Cite your own sourc
 
 ```
 CLAUDE.md                      this contract
-SKILL.md                       the skill map (/gtm-engine)
+SKILL.md                       the skill map (/gtm-machine-os)
 skills/<name>/                 19 skills: discovery, the 12 pillars, two orchestrators, two gates
 agents/                        researcher, strategist, evidence-auditor
 Phase1_Strategy/SKILL-PROTOCOL.md   the rules every skill follows

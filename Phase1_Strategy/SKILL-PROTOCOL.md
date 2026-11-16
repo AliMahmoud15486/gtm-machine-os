@@ -1,14 +1,14 @@
 # Pillar Skill Protocol
 
-Every per-pillar skill (`gtm-engine:segmentation`, `gtm-engine:icp`, `gtm-engine:personas`, …) follows this protocol.
+Every per-pillar skill (`gtm-machine-os:segmentation`, `gtm-machine-os:icp`, `gtm-machine-os:personas`, …) follows this protocol.
 Skill files hold only what is specific to their pillar; everything shared lives here, once.
 
-The skills are packaged as the private **`gtm-engine` plugin** in `~/.claude/skills/gtm-engine/`
-(auto-loads, callable from any working folder as `gtm-engine:<skill>`;
-agents as `gtm-engine:researcher` / `strategist` / `evidence-auditor`). The **system** stays in one place:
+The skills are packaged as the private **`gtm-machine-os` plugin** in `~/.claude/skills/gtm-machine-os/`
+(auto-loads, callable from any working folder as `gtm-machine-os:<skill>`;
+agents as `gtm-machine-os:researcher` / `strategist` / `evidence-auditor`). The **system** stays in one place:
 
 ```
-GTM_ROOT = ~/.claude/skills/gtm-engine
+GTM_ROOT = ~/.claude/skills/gtm-machine-os
 ```
 
 Always use absolute paths under `GTM_ROOT` — the session's working directory may be another
@@ -40,13 +40,13 @@ Each skill declares its upstream artifacts. Before running:
 
 | Upstream state | Action |
 |---|---|
-| `00_Discovery.md` missing (any pillar) | **Stop.** Offer `gtm-engine:discovery`. Pillars cite its fact base instead of rediscovering the company. |
+| `00_Discovery.md` missing (any pillar) | **Stop.** Offer `gtm-machine-os:discovery`. Pillars cite its fact base instead of rediscovering the company. |
 | Business Profile missing, or any of P1–P5 `UNKNOWN` (any pillar) | **Stop.** Ask only the missing fields, in one round, or offer to re-run discovery. A pillar run without knowing the business type, revenue model, deal size, how they buy and the stage produces generic output. |
 | Missing | **Stop.** Say which skill must run first. Offer to run it. Do not quietly fill the gap inline. |
 | `STALE` | Stop. Say it must be re-run or re-confirmed first. |
 | `DRAFT` / `PROPOSED` | Proceed, but the header states *"built on unlocked upstream"* and the open-questions section repeats the upstream's unresolved decisions. |
 | `LOCKED` | Proceed. |
-| Phase 2 skill (`09`–`14`) and `08_Coherence-Audit.md` is missing or its verdict is **FAIL** | **Stop.** Phase 2 executes the strategy; it does not remake it. Offer `gtm-engine:coherence-audit`. PASS-WITH-GAPS proceeds, and the header repeats the open gaps. |
+| Phase 2 skill (`09`–`14`) and `08_Coherence-Audit.md` is missing or its verdict is **FAIL** | **Stop.** Phase 2 executes the strategy; it does not remake it. Offer `gtm-machine-os:coherence-audit`. PASS-WITH-GAPS proceeds, and the header repeats the open gaps. |
 
 A legacy combined file (e.g. older `02_ICP-and-Buying-Center.md`) counts as upstream input for
 whatever sections it contains.
@@ -78,14 +78,14 @@ Count the tags for the header. If `ASSUMED` > 60%, the header says **hypothesis*
 Every pillar skill runs deep unless the owner says "fast" for this run. Deep mode is a fixed pipeline:
 
 ```
- ① Research          gtm-engine:researcher (background, parallel where the skill names >1 brief)
+ ① Research          gtm-machine-os:researcher (background, parallel where the skill names >1 brief)
         ↓
  ② Draft             inline — candidates, scoring, tables, against the framework's output contract
         ↓
- ③ Judgement         gtm-engine:strategist — makes the skill's named call, returns recommendation +
+ ③ Judgement         gtm-machine-os:strategist — makes the skill's named call, returns recommendation +
                      alternatives that lost + what would flip it
         ↓
- ④ Attack            gtm-engine:evidence-auditor — attacks the drafted claims AND the strategist's
+ ④ Attack            gtm-machine-os:evidence-auditor — attacks the drafted claims AND the strategist's
                      recommendation; every REFUTED/WEAKENED verdict is either fixed or carried
                      into Open questions, never dropped
         ↓
@@ -216,7 +216,7 @@ At the end of every run, before §8's summary:
 4. **Downstream rows:** set `STALE` wherever §9 staled the artifact, and clear those ticks.
 5. **Decisions log:** add one row per `PROPOSED` decision this run made.
 6. When the owner locks an artifact (§8), set the row to `LOCKED` in the same edit as the run log.
-7. `gtm-engine:metrics` adds `REVIEW-DUE` to a row when one of its pre-set re-run triggers fires.
+7. `gtm-machine-os:metrics` adds `REVIEW-DUE` to a row when one of its pre-set re-run triggers fires.
    It never sets `STALE` itself. The owner decides whether to re-run, and the re-run then stales
    downstream as usual (§9).
 

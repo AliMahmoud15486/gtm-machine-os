@@ -11,7 +11,7 @@ version: 1.0.0
 ## Before anything
 
 Follow the shared protocol. It is part of this skill:
-`~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md`
+`~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md`
 
 | | |
 |---|---|
@@ -23,7 +23,7 @@ Follow the shared protocol. It is part of this skill:
 
 **Business Profile** (protocol §3): `00_Discovery.md` missing, or any of P1–P5 unknown → stop. Apply the Pillar 6 defaults in `GTM_ROOT/Playbook/SPINE.md` ("How the profile changes each pillar"; if none are listed, say so) and state them in the artifact's `**Profile:**` header line. A departure is a `PROPOSED` decision with its reason.
 
-If `03` is missing or STALE, **stop** and offer `gtm-engine:value-prop` (protocol §3). If `06` is missing or STALE, **stop** and offer `gtm-engine:proof`. If prices already exist (intake), treat them as the **current state to evaluate**, not as a given or a blank slate.
+If `03` is missing or STALE, **stop** and offer `gtm-machine-os:value-prop` (protocol §3). If `06` is missing or STALE, **stop** and offer `gtm-machine-os:proof`. If prices already exist (intake), treat them as the **current state to evaluate**, not as a given or a blank slate.
 
 ## Rules specific to this pillar
 
@@ -60,7 +60,7 @@ If `03` is missing or STALE, **stop** and offer `gtm-engine:value-prop` (protoco
 - List the current prices and terms, if any (intake; portal; code).
 
 ### 2. Research (deep step ①)
-Small `gtm-engine:researcher` briefs that save as they go; reuse `03`/`04` competitor research first.
+Small `gtm-machine-os:researcher` briefs that save as they go; reuse `03`/`04` competitor research first.
 - **Platform terms:** commission or revenue share, billing mechanics, trial rules, plan changes, refunds, coupons, price-change rules, payout timing. Primary sources.
 - **Cost inputs:** per-unit rates (e.g. messaging rate cards), infra pricing for the stack in use, payment fees. Read the product's own config and docs for real usage per unit.
 - **Benchmark logic:** model, metric, fences, trials, annual terms and add-ons for ≥2 alternatives, verbatim. Reuse earlier research.
@@ -83,7 +83,7 @@ A logic table.
 - **Risk-reversal terms:** the commercial terms (fee, refund amount, billing mechanics) of the pilot or guarantee `06` chose, consistent with `04`/`06`. Do not re-choose the risk reversal here.
 
 ### 7. Judgement (deep step ③)
-Send `gtm-engine:strategist` the floor, ceiling, benchmark and design. Ask for:
+Send `gtm-machine-os:strategist` the floor, ceiling, benchmark and design. Ask for:
 - the recommended **value metric, tiers and price points** (or **keep current**, with reasons);
 - the **fair-use** terms;
 - the **entry offer**;
@@ -91,7 +91,7 @@ Send `gtm-engine:strategist` the floor, ceiling, benchmark and design. Ask for:
 - what would flip each call.
 
 ### 8. Attack (deep step ④)
-Send `gtm-engine:evidence-auditor`:
+Send `gtm-machine-os:evidence-auditor`:
 - every cost input and its source;
 - the margin arithmetic at the caps;
 - the ceiling's inputs;
@@ -114,7 +114,7 @@ Research goes to `products/<slug>/research/`. Then write to `products/<slug>/ass
 | `07_price-change-playbook.md` | For existing subscribers: notice, grandfathering, platform mechanics, the RAISE letter template (market language) | Changing prices without churn or a 1★ wave |
 
 ### 10. Present
-Update the tracker (protocol §10), then present per protocol §8. Next: **run `gtm-engine:coherence-audit`** (Phase 1 gate).
+Update the tracker (protocol §10), then present per protocol §8. Next: **run `gtm-machine-os:coherence-audit`** (Phase 1 gate).
 
 ## Checks before presenting (framework output contract)
 - [ ] Objective in one sentence with a margin target

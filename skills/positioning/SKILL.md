@@ -12,7 +12,7 @@ Positioning ≠ messaging. This pillar decides; Pillar 4 words it.
 ## Before anything
 
 Follow the shared protocol. It is part of this skill:
-`~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md`
+`~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md`
 
 | | |
 |---|---|
@@ -24,7 +24,7 @@ Follow the shared protocol. It is part of this skill:
 
 **Business Profile** (protocol §3): `00_Discovery.md` missing, or any of P1–P5 unknown → stop. Apply the Pillar 3 defaults in `GTM_ROOT/Playbook/SPINE.md` ("How the profile changes each pillar"; if none are listed, say so) and state them in the artifact's `**Profile:**` header line. A departure is a `PROPOSED` decision with its reason.
 
-If `03_Value-Proposition.md` is missing or STALE, **stop** and offer `gtm-engine:value-prop` (protocol §3).
+If `03_Value-Proposition.md` is missing or STALE, **stop** and offer `gtm-machine-os:value-prop` (protocol §3).
 
 ## Rules specific to this pillar
 
@@ -54,7 +54,7 @@ If `03_Value-Proposition.md` is missing or STALE, **stop** and offer `gtm-engine
 - Run each asset through **"so what?" ×5** to get from capability to benefit.
 
 ### 2. Research (deep step ①)
-Small `gtm-engine:researcher` briefs that save as they go (protocol §5):
+Small `gtm-machine-os:researcher` briefs that save as they go (protocol §5):
 - **Competitor positioning teardown.** For each direct competitor and suite: their category word, hero line, target, main claims, proof shown, price anchor (verbatim, URL, date). **For each candidate only-ness claim, does anyone already claim it, and how close are they to being able to?** Reuse `03` research and fetch only what's new.
 - **Decision criteria.** What buyers praise and complain about when choosing tools in this category (reviews, forums, interviews). Count the themes. These become the map's axes and the battlecards' landmines.
 - **Hands-on checks, where cheap and legitimate:** published trials, public docs, demo videos. **Never** place fake orders or impersonate a customer.
@@ -68,7 +68,7 @@ One block per alternative.
 ### 5. 3-Circles and positioning map (rules 5–6)
 
 ### 6. Judgement (deep step ③)
-Send `gtm-engine:strategist` the inputs, the only-ness tests, the alternatives, the circles and the map. Ask for:
+Send `gtm-machine-os:strategist` the inputs, the only-ness tests, the alternatives, the circles and the map. Ask for:
 - **the 1–2 only-ness claims**, or the price-fight call plus the edge to build;
 - **the competitive positioning pillar**: value-based / problem–solution / quality / innovator;
 - **the positioning statement** (six lines);
@@ -78,7 +78,7 @@ Send `gtm-engine:strategist` the inputs, the only-ness tests, the alternatives, 
 - what would flip each call.
 
 ### 7. Attack (deep step ④)
-Send `gtm-engine:evidence-auditor`:
+Send `gtm-machine-os:evidence-auditor`:
 - every only-ness claim, with its litmus reasoning (it must re-check competitor copy itself);
 - every competitor claim we attribute to someone;
 - the map scores;
@@ -101,7 +101,7 @@ Research goes to `products/<slug>/research/`. Then write to `products/<slug>/ass
 | `04_validation-plan.md` | Which of the five loops runs, when, sample size, and keep / change / kill thresholds **set now** | Knowing in 30–60 days whether the position works |
 
 ### 9. Present
-Update the tracker (protocol §10), then present per protocol §8. Next skill: `gtm-engine:messaging` (Pillar 4).
+Update the tracker (protocol §10), then present per protocol §8. Next skill: `gtm-machine-os:messaging` (Pillar 4).
 
 ## Checks before presenting (framework output contract)
 - [ ] Six inputs stated; missing ones named
@@ -116,7 +116,7 @@ Update the tracker (protocol §10), then present per protocol §8. Next skill: `
 - [ ] Locked upstream decisions respected; conflicts raised as open questions
 - [ ] All assets written
 
-Playbook "Pillar 3 is done when" (tick in `00_Playbook-Tracker.md` per protocol §10, only where the artifact shows it; the canvas, driver, claim and category boxes belong to `gtm-engine:value-prop`):
+Playbook "Pillar 3 is done when" (tick in `00_Playbook-Tracker.md` per protocol §10, only where the artifact shows it; the canvas, driver, claim and category boxes belong to `gtm-machine-os:value-prop`):
 - [ ] The positioning statement is written, and its only-ness claim passes the "competitor tomorrow" test
 - [ ] Each alternative is scripted: do nothing, build in-house, a generic provider, a tool alone
 - [ ] The 30–60 day validation targets are set

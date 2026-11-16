@@ -12,7 +12,7 @@ version: 1.0.0
 ## Before anything
 
 Follow the shared protocol — it is part of this skill:
-`~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md`
+`~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md`
 
 It covers `GTM_ROOT`, the contract, product resolution, the prerequisite gate, evidence tags,
 deep-mode pipeline, artifact header, assets, locking and staleness. Below is only what is
@@ -36,7 +36,7 @@ From intake and product docs: the market (category), the **vertical** and **hori
 platform or geography). Locked constraints are inputs, not candidates to re-score.
 
 ### 2. Research — deep step ①
-Launch `gtm-engine:researcher` with two briefs, **in parallel, in the background**:
+Launch `gtm-machine-os:researcher` with two briefs, **in parallel, in the background**:
 - **Sizing brief:** top-down figures (report, year, region) **and** bottom-up population counts
   (number of companies matching each candidate segment × an ASP source). Ask for both methods
   per layer and the gap between them.
@@ -77,14 +77,14 @@ write a plausible quote. Score pain / ease of sale / ease of implementation 1–
 there's no product). Name the **traction** winner and the **money** winner separately.
 
 ### 7. Judgement — deep step ③
-Send `gtm-engine:strategist` the ranking table, the map, sizing, intake constraints. Ask for:
+Send `gtm-machine-os:strategist` the ranking table, the map, sizing, intake constraints. Ask for:
 the **beachhead** (one), whether this cycle optimises for traction or money, the **adjacent
 wave 2**, the **"not now" list** with the reason each lost, and what evidence would flip the
 call. Check the beachhead against the must-haves: winnable in ≤18 months (B2B: ~100 companies,
 30–50% won), high pain, budget exists, healthy surrounding market, word-of-mouth potential.
 
 ### 8. Attack — deep step ④
-Send `gtm-engine:evidence-auditor` the sizing numbers, the ranking scores carrying the most weight,
+Send `gtm-machine-os:evidence-auditor` the sizing numbers, the ranking scores carrying the most weight,
 **every quote in the Market-Problem Map (verify against the source, and check it is filed under
 the right problem)**, and the strategist's beachhead recommendation. Attack the SOM penetration
 assumption hardest. Fix or carry every non-surviving claim into Open questions. If the audit
@@ -101,7 +101,7 @@ Research reports and raw pulls go to `products/<slug>/research/` (protocol §5).
 | `01_beachhead-brief.md` | one page: beachhead definition, why, how many companies, how to find them (search filters / directories / communities), the 18-month win target in numbers, the first test | hand to whoever starts prospecting |
 
 ### 10. Present
-Update the tracker (protocol §10), then present per protocol §8. Next skill: `gtm-engine:icp`.
+Update the tracker (protocol §10), then present per protocol §8. Next skill: `gtm-machine-os:icp`.
 
 ## Checks before presenting (the framework's output contract)
 - [ ] TAM/SAM/SOM each with method + assumptions + tag; SOM vs 1–5% norm addressed

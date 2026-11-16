@@ -1,6 +1,6 @@
 # GTM Intake — <PRODUCT NAME>
 
-> Copy this whole `_TEMPLATE/` folder to `products/<slug>/`. `gtm-engine:discovery` fills this file
+> Copy this whole `_TEMPLATE/` folder to `products/<slug>/`. `gtm-machine-os:discovery` fills this file
 > and the owner (or the client) confirms it before any pillar runs. Everything below is a prerequisite, not a formality — the answers determine how
 > much of the resulting strategy is validated and how much is hypothesis.
 
@@ -18,7 +18,7 @@ internal calibration, not a landing page.
 
 ## 2. Business Profile
 
-Filled by `gtm-engine:discovery` (§0 of `00_Discovery.md`), confirmed by the owner or the client.
+Filled by `gtm-machine-os:discovery` (§0 of `00_Discovery.md`), confirmed by the owner or the client.
 Every pillar reads it first. Definitions: `Playbook/SPINE.md` → "The Business Profile".
 
 | # | Field | Value | Tag |

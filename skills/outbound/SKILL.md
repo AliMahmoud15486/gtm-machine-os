@@ -11,18 +11,18 @@ version: 1.0.0
 ## Before anything
 
 Follow the shared protocol. It is part of this skill:
-`~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md`
+`~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md`
 
 | | |
 |---|---|
 | **Method** | `GTM_ROOT/Frameworks/14_Outbound-Prospecting-and-Outreach.md`: read in full — the reply equation (§2), list building and qualification (§3), offer (§4), message structure and ice-breaker (§5), magnets and case studies (§6), sequencing (§7), channels (§8), the 13 principles (§9), AI-assisted ABM and the dashboard (§10), inconsistencies, **Source gaps**, output contract. Plus `Frameworks/09_Sales-Led-Growth-and-Sales-Process.md` §3 [1] (targeting & prospecting: tiers, triggers, exit criteria) · `Frameworks/13_Maja-Voje-GTM-Strategist.md` **ch.7** (outbound channel rules, D1–D17 cadence, ABM account maths) · `Frameworks/10_Lead-Nurture.md` §3 (compliance caveats) |
 | **Upstream (required)** | `08_Coherence-Audit.md` (verdict) · `02_ICP.md` (triggers, anti-ICP) · `02b_Buying-Center-and-Personas.md` + `assets/02b_role-finder.md` · `05_Messaging-and-Channels.md` + `assets/05_channel-plan.md`, `05_copy-kit.md`, `05_messaging-matrix.csv`, `05_banned-phrases.txt`, `05_copy-lint.py` · `06_Proof-System.md` + `assets/06_proof-tracker.csv` (**approved proof only**) · `assets/03_claims-register.csv` · `09_GTM-Motion-and-Routes-to-Market.md` (how much outbound) · `10_Revenue-Process-and-SLAs.md` (hand-off, SLA, stage [1] exit) |
-| **Upstream (if present)** | `11_Demand-Generation.md` (lead magnet as soft CTA) · `07_Pricing-and-Packaging.md` (entry offer) · `leads/` from `gtm-engine:lead-research` (L1 accounts, L2 contact routes, L3 nurture, leads-log) |
+| **Upstream (if present)** | `11_Demand-Generation.md` (lead magnet as soft CTA) · `07_Pricing-and-Packaging.md` (entry offer) · `leads/` from `gtm-machine-os:lead-research` (L1 accounts, L2 contact routes, L3 nurture, leads-log) |
 | **Writes** | `products/<slug>/12_Outbound.md` · `products/<slug>/assets/12_*` |
 | **Template** | `template.md` in this skill's folder |
 | **Downstream on re-run** | marks `13`, `14` and `15` `STALE` (protocol §9) |
 
-**Gates** (protocol §3): Phase 2 — stop if `08` is missing or FAIL; PASS-WITH-GAPS proceeds and the header repeats the gaps. If `09` is missing, stop and offer `gtm-engine:motion`; if `10` is missing, stop and offer `gtm-engine:revenue-process`. If `09` gives outbound **no role**, write a one-page `12_Outbound.md` saying so, with the trigger that would bring it in, and stop. If `leads/` is missing, design the architecture anyway and **offer `gtm-engine:lead-research`**; the list done-when boxes stay unticked.
+**Gates** (protocol §3): Phase 2 — stop if `08` is missing or FAIL; PASS-WITH-GAPS proceeds and the header repeats the gaps. If `09` is missing, stop and offer `gtm-machine-os:motion`; if `10` is missing, stop and offer `gtm-machine-os:revenue-process`. If `09` gives outbound **no role**, write a one-page `12_Outbound.md` saying so, with the trigger that would bring it in, and stop. If `leads/` is missing, design the architecture anyway and **offer `gtm-machine-os:lead-research`**; the list done-when boxes stay unticked.
 
 ## The Business Profile — how it changes this pillar
 
@@ -59,7 +59,7 @@ Read the profile (protocol §3) and state in the header which of these applied.
 Gates above. Read the profile, `08`'s verdict and open gaps, `09`'s outbound role and capacity, `10`'s stage [1] exit and SLA, and `leads-log.md` (yields, tiers, contact-route coverage).
 
 ### 2. Research (deep step ①)
-Small `gtm-engine:researcher` briefs, saved as they go (protocol §5):
+Small `gtm-machine-os:researcher` briefs, saved as they go (protocol §5):
 - **Legal, one brief per market:** cold-outreach rules per channel, lawful basis for B2B contact data, opt-out duties. Primary sources only.
 - **Sending infrastructure:** the chosen tools' documented limits (daily sends, warm-up guidance, LinkedIn weekly invitation and InMail limits) — current, with dates.
 
@@ -74,10 +74,10 @@ Small `gtm-engine:researcher` briefs, saved as they go (protocol §5):
 - **Weekly dashboard:** metrics, formulas, owner, review day, and the ICP feedback path to `02`.
 
 ### 4. Judgement (deep step ③)
-Send `gtm-engine:strategist` the draft. Ask for: volume vs relevance; short vs extended; the channel mix and order; the first CTA (reply, magnet or meeting); which segment and tier go first; what would flip each call.
+Send `gtm-machine-os:strategist` the draft. Ask for: volume vs relevance; short vs extended; the channel mix and order; the first CTA (reply, magnet or meeting); which segment and tier go first; what would flip each call.
 
 ### 5. Attack (deep step ④)
-Send `gtm-engine:evidence-auditor`: every legal rule and its source; every line of copy against the claims register and `06` (any proof not approved is critical); token traceability; the volume arithmetic; infrastructure numbers and their sources; consistency with `02b`/`05`/`09`/`10`. Fix or carry into Open questions; Option A / B if the audit undermines the strategist (protocol §5 ④b).
+Send `gtm-machine-os:evidence-auditor`: every legal rule and its source; every line of copy against the claims register and `06` (any proof not approved is critical); token traceability; the volume arithmetic; infrastructure numbers and their sources; consistency with `02b`/`05`/`09`/`10`. Fix or carry into Open questions; Option A / B if the audit undermines the strategist (protocol §5 ④b).
 
 ### 6. Assets
 Write to `products/<slug>/assets/`:
@@ -95,7 +95,7 @@ Write to `products/<slug>/assets/`:
 | `12_weekly-dashboard.csv` | Weekly rows with formulas: sends, accepts, replies, positive replies, meetings, by segment × persona × channel × variant; qualification and disqualification rates; ICP notes | The weekly outbound review and the feedback to `02` |
 
 ### 7. Tracker and present
-Update `00_Playbook-Tracker.md` per protocol §10. Present per protocol §8. Next skill: `gtm-engine:enablement` (Pillar 11).
+Update `00_Playbook-Tracker.md` per protocol §10. Present per protocol §8. Next skill: `gtm-machine-os:enablement` (Pillar 11).
 
 ## Checks before presenting
 

@@ -12,7 +12,7 @@ Hormozi: **claim your proof, don't prove your claim.** Collect first; claim only
 ## Before anything
 
 Follow the shared protocol. It is part of this skill:
-`~/.claude/skills/gtm-engine/Phase1_Strategy/SKILL-PROTOCOL.md`
+`~/.claude/skills/gtm-machine-os/Phase1_Strategy/SKILL-PROTOCOL.md`
 
 | | |
 |---|---|
@@ -24,7 +24,7 @@ Follow the shared protocol. It is part of this skill:
 
 **Business Profile** (protocol §3): `00_Discovery.md` missing, or any of P1–P5 unknown → stop. Apply the Pillar 5 defaults in `GTM_ROOT/Playbook/SPINE.md` ("How the profile changes each pillar"; if none are listed, say so) and state them in the artifact's `**Profile:**` header line. A departure is a `PROPOSED` decision with its reason.
 
-If `05` is missing or STALE, **stop** and offer `gtm-engine:messaging` (protocol §3).
+If `05` is missing or STALE, **stop** and offer `gtm-machine-os:messaging` (protocol §3).
 
 ## Rules specific to this pillar
 
@@ -63,7 +63,7 @@ If `05` is missing or STALE, **stop** and offer `gtm-engine:messaging` (protocol
    - respects any threshold the owner set: e.g. "publish only after n stores", and as *those stores'* result, not a general rate.
 6. **Platform review rules beat Hormozi's incentive tips.** Never offer incentives for platform/marketplace reviews. Never sentiment-gate (ask only happy customers). Ask everyone the same way. Incentives are allowed only for owned proof (case-study time, interviews) and must be disclosed. Check each platform's terms (research them).
 7. **Score proof assets on the 13 rules.** Each planned asset gets a quick score (how many rules it ticks), and the plan pushes toward live / raw / show / others-saying / identical-to-them / numbers. The strongest proof is **the prospect's own result before they buy** (e.g. the trial's own data), so design for that first.
-8. **Risk reversal with boundaries** (framework §Risk-free guarantees, contract item 8). The guarantee must be executable on the platform's billing. Write its conditions and its abuse limits down. It must be consistent with `04`. **Proof owns the risk-reversal choice** (type, conditions, boundaries); `gtm-engine:pricing` (`07`) then sets the commercial terms of any pilot or guarantee consistent with it. Where the risk reversal needs an entry offer, take the offer idea from `03`/`04` and leave its price to pricing — say so in the artifact.
+8. **Risk reversal with boundaries** (framework §Risk-free guarantees, contract item 8). The guarantee must be executable on the platform's billing. Write its conditions and its abuse limits down. It must be consistent with `04`. **Proof owns the risk-reversal choice** (type, conditions, boundaries); `gtm-machine-os:pricing` (`07`) then sets the commercial terms of any pilot or guarantee consistent with it. Where the risk reversal needs an entry offer, take the offer idea from `03`/`04` and leave its price to pricing — say so in the artifact.
 9. **Read the product's own published privacy policy and terms before designing any harvest.** Retention promises, legal bases claimed, and processor/controller roles. Never propose keeping data longer than the policy says. Copy only minimal fields into purpose-built tables.
 10. **Pilots that produce a number must be pre-registered and honest about power.**
     - Specify the assignment exactly (hash, encoding, merchant-visible key), the outcome classes and cut-off, a single look, and the interval method.
@@ -80,7 +80,7 @@ If `05` is missing or STALE, **stop** and offer `gtm-engine:messaging` (protocol
 From `05` pillars, the `04` only-ness and risk reversal, and the claims register: one row each.
 
 ### 2. Research (deep step ①)
-Small `gtm-engine:researcher` briefs that save as they go:
+Small `gtm-machine-os:researcher` briefs that save as they go:
 - **Platform review and testimonial rules:** incentives, prompting, display of reviews, responding to reviews.
 - **Local rules on performance and comparative claims, and on using customer data or names in marketing** (e.g. consumer-protection, advertising and data-protection law).
 - **How proof is displayed in the category:** what competitors show (reviews, counts, logos, case studies); what third-party verification exists (badges, platform certifications, awards).
@@ -108,7 +108,7 @@ Does proof move conversion? Which metric, and from which source.
 ### 8. Risk reversal (rule 8)
 
 ### 9. Judgement (deep step ③)
-Send `gtm-engine:strategist` the grid, harvest plan, matrix and risk reversal. Ask for:
+Send `gtm-machine-os:strategist` the grid, harvest plan, matrix and risk reversal. Ask for:
 - the **first proof to generate** and the fastest honest path to it;
 - the pilot / measurement design;
 - the risk-reversal choice;
@@ -116,7 +116,7 @@ Send `gtm-engine:strategist` the grid, harvest plan, matrix and risk reversal. A
 - what would flip each call.
 
 ### 10. Attack (deep step ④)
-Send `gtm-engine:evidence-auditor` the grid, the hooks (are they real in the product?), the consent design, the pilot protocol (will it produce an attributable number?), the review-request script (platform-compliant?) and the risk-reversal terms. Fix each finding, or carry it into Open questions.
+Send `gtm-machine-os:evidence-auditor` the grid, the hooks (are they real in the product?), the consent design, the pilot protocol (will it produce an attributable number?), the review-request script (platform-compliant?) and the risk-reversal terms. Fix each finding, or carry it into Open questions.
 
 ### 11. Assets
 Research goes to `products/<slug>/research/`. Then write to `products/<slug>/assets/`:
@@ -132,7 +132,7 @@ Research goes to `products/<slug>/research/`. Then write to `products/<slug>/ass
 | `06_proof-tracker.csv` | Asset ID, type, customer (anon label), consent level, date, number + derivation, where used, "proof used?" | The library, and its measurement |
 
 ### 12. Present
-Update the tracker (protocol §10), then present per protocol §8. Next skill: `gtm-engine:pricing` (Pillar 6).
+Update the tracker (protocol §10), then present per protocol §8. Next skill: `gtm-machine-os:pricing` (Pillar 6).
 
 ## Checks before presenting (framework output contract)
 - [ ] Grid: one row per pillar + only-ness + risk reversal; each with type, format, owner, status
@@ -143,7 +143,7 @@ Update the tracker (protocol §10), then present per protocol §8. Next skill: `
 - [ ] Distribution assignments across all five destinations (or n/a with reason)
 - [ ] Instrumentation specified before assets ship (asset IDs, "proof used?" field)
 - [ ] Risk reversal chosen, executable on the platform, with boundaries
-- [ ] No pricing dependency: any entry offer comes from `03`/`04`, its price is left to `gtm-engine:pricing`
+- [ ] No pricing dependency: any entry offer comes from `03`/`04`, its price is left to `gtm-machine-os:pricing`
 - [ ] No fabricated proof: no example testimonials, sample numbers or placeholder logos
 - [ ] Review requests platform-compliant (no incentives, no sentiment-gating); copy linted
 - [ ] All assets written

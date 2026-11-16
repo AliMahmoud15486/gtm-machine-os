@@ -8,16 +8,16 @@ Answers: *How does pipeline actually get generated and converted, and how do we 
 
 ## Skills (run in this order)
 
-**Orchestrator:** `gtm-engine:execution` runs these six in order, at the depth `09` sets for each, then the Phase 2 cross-check → `15_Execution-Audit.md` (the Phase 2 gate) and a 30/60/90 execution plan.
+**Orchestrator:** `gtm-machine-os:execution` runs these six in order, at the depth `09` sets for each, then the Phase 2 cross-check → `15_Execution-Audit.md` (the Phase 2 gate) and a 30/60/90 execution plan.
 
 | Run | Pillar | Skill | Artifact | Method |
 |---|---|---|---|---|
-| 1 | 8 Motion | `gtm-engine:motion` | `09_GTM-Motion-and-Routes-to-Market.md` | `Frameworks/08`, `09` §1/§4, `13` ch.7–8 |
-| 2 | 10 Revenue process | `gtm-engine:revenue-process` | `10_Revenue-Process-and-SLAs.md` | `Frameworks/09`, `10` |
-| 3 | 7 Demand gen | `gtm-engine:demand-gen` | `11_Demand-Generation.md` | `Frameworks/10`, `13` ch.7, `05` |
-| 4 | 9 Outbound | `gtm-engine:outbound` (+ `lead-research`) | `12_Outbound.md`, `leads/` | `Frameworks/14`, `09` [1], `13` ch.7 |
-| 5 | 11 Enablement | `gtm-engine:enablement` | `13_Enablement.md` | `Frameworks/12` §3/§5, `13` ch.8, `09` [6]/[8] |
-| 6 | 12 Metrics | `gtm-engine:metrics` | `14_Metrics-and-Feedback.md` | `Frameworks/12` §4, `13` ch.1/4/8 |
+| 1 | 8 Motion | `gtm-machine-os:motion` | `09_GTM-Motion-and-Routes-to-Market.md` | `Frameworks/08`, `09` §1/§4, `13` ch.7–8 |
+| 2 | 10 Revenue process | `gtm-machine-os:revenue-process` | `10_Revenue-Process-and-SLAs.md` | `Frameworks/09`, `10` |
+| 3 | 7 Demand gen | `gtm-machine-os:demand-gen` | `11_Demand-Generation.md` | `Frameworks/10`, `13` ch.7, `05` |
+| 4 | 9 Outbound | `gtm-machine-os:outbound` (+ `lead-research`) | `12_Outbound.md`, `leads/` | `Frameworks/14`, `09` [1], `13` ch.7 |
+| 5 | 11 Enablement | `gtm-machine-os:enablement` | `13_Enablement.md` | `Frameworks/12` §3/§5, `13` ch.8, `09` [6]/[8] |
+| 6 | 12 Metrics | `gtm-machine-os:metrics` | `14_Metrics-and-Feedback.md` | `Frameworks/12` §4, `13` ch.1/4/8 |
 
 Every skill reads the Business Profile first, writes specs and drafts only (it never sends, spends,
 publishes or configures tools), and updates the project's `00_Playbook-Tracker.md`. Map:

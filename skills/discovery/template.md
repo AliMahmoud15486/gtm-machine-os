@@ -1,6 +1,6 @@
 # 00 — Discovery — <PRODUCT / COMPANY>
 
-**Mode:** own product | client company · **Date:** YYYY-MM-DD · **Skill:** gtm-engine:discovery (deep)
+**Mode:** own product | client company · **Date:** YYYY-MM-DD · **Skill:** gtm-machine-os:discovery (deep)
 **Status:** PROPOSED — awaiting the owner · **Readiness:** READY | READY WITH GAPS | NOT READY
 
 > **Evidence base (exact):** N paying customers · N users · N months of usage data · N interviews · N reviews (avg ★) · N deals won / N lost with reasons.

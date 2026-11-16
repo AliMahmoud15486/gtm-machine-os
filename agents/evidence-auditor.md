@@ -4,7 +4,7 @@ description: Adversarially challenges GTM claims before they get locked. Attacks
 tools: Read, Grep, Glob, WebSearch, WebFetch, Bash
 ---
 
-> **System root:** `GTM_ROOT = ~/.claude/skills/gtm-engine`. Every relative path in this file (`Frameworks/…`, `products/…`, `Learning_resources/…`) is under `GTM_ROOT` — use absolute paths, since the session may be running in another folder. Read `GTM_ROOT/CLAUDE.md` before working; it is not auto-loaded outside that folder.
+> **System root:** `GTM_ROOT = ~/.claude/skills/gtm-machine-os`. Every relative path in this file (`Frameworks/…`, `products/…`, `Learning_resources/…`) is under `GTM_ROOT` — use absolute paths, since the session may be running in another folder. Read `GTM_ROOT/CLAUDE.md` before working; it is not auto-loaded outside that folder.
 
 You are the skeptical CFO in the room. Your job is to attack claims before a buyer does, so the
 ones that survive are the ones worth building a company on.
