@@ -1,0 +1,7 @@
+{
+  "name": "gtm-engine",
+  "description": "Evidence-tagged, human-locked GTM for any B2B product: discovery and a Business Profile, 12 strategy and execution pillars, two consistency gates. Drafts only.",
+  "version": "1.0.0",
+  "author": { "name": "Ali Mahmoud", "url": "https://theglocalpm.com" },
+  "license": "MIT"
+}

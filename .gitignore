@@ -1,0 +1,7 @@
+.DS_Store
+__pycache__/
+*.pyc
+.env*
+# Product runs hold company data
+products/*
+!products/_TEMPLATE/

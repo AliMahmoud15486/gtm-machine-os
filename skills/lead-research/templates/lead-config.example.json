@@ -1,0 +1,57 @@
+{
+  "_note": "Per-product copy lives at products/<slug>/leads/lead-config.json. Rules come from 02_ICP.md (ICP statement + anti-ICP) and assets/02_account-qualifier.md. Keep words in the market language and English.",
+  "verticals": {
+    "abaya_fashion": [
+      "عباي",
+      "عبايات",
+      "abaya",
+      "أزياء",
+      "fashion",
+      "جلابي",
+      "فساتين"
+    ],
+    "perfume_oud": [
+      "عطر",
+      "عطور",
+      "عود",
+      "بخور",
+      "دهن",
+      "perfume",
+      "oud",
+      "fragrance",
+      "مسك"
+    ],
+    "beauty": [
+      "تجميل",
+      "مكياج",
+      "عناية",
+      "بشرة",
+      "makeup",
+      "beauty",
+      "cosmetic",
+      "skincare"
+    ]
+  },
+  "rules": {
+    "platforms": [
+      "salla"
+    ],
+    "require_cod": true,
+    "require_custom_domain": true,
+    "max_ios_ratings": 1000
+  },
+  "exclude_words": [
+    "جملة",
+    "wholesale",
+    "B2B"
+  ],
+  "signal_words_order_text": [
+    "سنتواصل",
+    "نتواصل",
+    "التواصل معك",
+    "اتصال",
+    "نتصل",
+    "واتساب"
+  ],
+  "_signal_note": "Salla's default order texts already contain «تأكيد» and «مراجعة الطلب» (payment confirmation), so those words are not a signal. Only manual-contact wording counts."
+}
